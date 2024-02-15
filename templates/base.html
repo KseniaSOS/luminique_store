@@ -8,8 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description"
-    content="LUMINIQUE Store is ">
+  <meta name="description" content="LUMINIQUE Store is ">
   <meta name="keywords" content=" e-shop">
   <meta name="author" content="Ksenia Sossin">
   {% endblock %}
@@ -17,10 +16,11 @@
   {% block extra_meta %}
   {% endblock %}
 
-  {% block corecss %}  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Strike&display=swap" rel="stylesheet" type="text/css">
+  {% block corecss %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Strike&display=swap"
+    rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
@@ -29,13 +29,9 @@
 
   {% block corejs %}
   <script src="https://kit.fontawesome.com/1b66d180ba.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
   </script>
   {% endblock %}
 
@@ -44,71 +40,157 @@
 
   <title>Luminique Store {% block extra_title %}{% endblock %}</title>
 </head>
-<body class="d-flex flex-column h-100 main-bg">
-  <header class="container-fluid fixed-top">
-    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font text-black my-0">LUMINIQUE</h2>
-            </a>
-        </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <form method="GET" action="">
-                <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
-                    <div class="input-group-append">
-                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                            <span class="icon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <div><i class="fas fa-user fa-lg"></i></div>
-                            <p class="my-0">My Account</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="" class="dropdown-item">Admin area</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                    </div>
-                </li>
-                <li class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                        <div class="text-center">
-                            <div><i class="fas fa-shopping-basket"></i></div>
-                            <p class="my-0">
-                                {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-                                {% else %}
-                                    $0.00
-                                {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
 
-  
- 
+<body class="d-flex flex-column h-100 main-bg">
+
+  <nav class="navbar navbar-expand-xxl bg-dark">
+    <div class="container-fluid">
+      <div class="w-100 d-flex justify-content-between">
+        <div>
+          <i class="fa-solid fa-envelope text-light"></i>
+          <a href="" class="navbar-sm-brand text-light text-decoration-none
+               contact-info">
+            info@luminique.com
+          </a>
+          <i class="fa-solid fa-phone contact-info text-light"></i>
+          <a href="" class="navbar-sm-brand text-white text-decoration-none
+               contact-info">
+            236-56-899
+          </a>
+        </div>
+        <div>
+          <a href="" class="text-white">
+            <i class="fa-brands fa-facebook me-2"></i></a>
+          <a href="" class="text-white">
+            <i class="fa-brands fa-instagram me-2"></i></a>
+          <a href="" class="text-white">
+            <i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+
+
+  <nav class="navbar navbar-expand-xxl bg-light navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand ml-4" href="{% url 'home' %}">LUMINIQUE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item nav-items">
+            <a class="nav-link nav-links" ria-current="page" href="#">
+              About
+            </a>
+          </li>
+          <li class="nav-item nav-items dropdown">
+            <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+
+              <li><a class="dropdown-item" href="">By
+                  Price</a></li>
+              <li><a class="dropdown-item" href="">By
+                  Rating</a></li>
+              <li><a class="dropdown-item" href="">All Products</a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-items dropdown">
+            <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+
+              <li><a class="dropdown-item" href="">Earrings</a></li>
+              <li><a class="dropdown-item" href="">Bracelets</a></li>
+              <li><a class="dropdown-item" href="">Neclaces</a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-items dropdown">
+            <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              LUMINIQUE Blog
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+
+              <li><a class="dropdown-item" href="">Trends</a></li>
+              <li><a class="dropdown-item" href="">Tips</a></li>
+              <li><a class="dropdown-item" href="">Inspiration</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form method="GET" action="" class="w-auto mx-4 search-mob-nav">
+          <div class="input-group">
+            <button class="btn btn-link nav-links search-input" aria-label="Search this site" type="submit"><i
+                class="fa fa-search fa-fw" aria-hidden="true"></i></button>
+            <input class="form-control me-2" type="search" name="q" placeholder="Search Product ..."
+              aria-label="Search">
+          </div>
+        </form>
+        <ul class="navbar-nav d-flex flex-row me-1">
+          <li class="nav-item icon dropdown">
+            <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownMyAccount" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>
+              Account
+            </a>
+            <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdownMyAccount">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+              <li>
+                <a href="" class="dropdown-item">Product Menagement</a>
+              </li>
+              <li>
+                <a href="" class="dropdown-item">Blog Menagement</a>
+                {% endif %}
+              </li>
+              <li>
+                <a href="" class="dropdown-item">My Profile</a>
+              </li>
+              <li>
+                <a href="" class="dropdown-item">My Wishlist</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              </li>
+              {% else %}
+              <li>
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              </li>
+              <li>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              </li>
+              {% endif %}
+            </ul>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link nav-links ml-2 icon" href=""><i class="fa-solid fa-basket-shopping"></i>
+              {% if grand_total %}
+              <strong>€{{ grand_total|floatformat:2 }}</strong>
+              {% else %}
+              €0.00
+              {% endif %}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
   {% if messages %}
   <div class="message-container"></div>
   {% endif %}
