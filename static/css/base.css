@@ -7,6 +7,8 @@ body {
     color:  #000000;
 }
 
+/* Navbar */
+
 .navbar-brand {
     font-family: "Protest Strike", sans-serif;
     font-weight: 400;
@@ -53,10 +55,6 @@ input[type=search] {
 }
 
 /* Carousel */
-
-/* .carousel-inner{
-    background-color: #5fa68a;
-} */
 
 .slide-1 {
     background-color: #5fa68a;
