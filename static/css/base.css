@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: "Oswald", sans-serif;
-    color:  #000000;
+    color:  #000000;    
 }
 
 /* Navbar */
@@ -19,13 +19,19 @@ body {
 }
 
 .contact-info {
-    font-size: 12px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
     font-size: 19px;
     font-weight: 500;
     color: #000000 !important;
+}
+
+.order {
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .nav-links:hover {
@@ -87,6 +93,50 @@ input[type=search] {
     border: solid;    
 }
 
+/* Products */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* .card-text {
+
+} */
+
+/* .img-zoom {
+    overflow: hidden;
+}
+
+.img-zoom img {
+    transition: transform .4s ease;
+}
+
+.img-zoom:hover img {
+    transform: scale(1.2);
+} */
+
+.card { 
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.3);
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
 @media screen and (max-width: 1400px) {
 
@@ -96,3 +146,13 @@ input[type=search] {
     }
 
 }
+
+
+/* @media screen and (max-width: 569px) {
+
+    .order {
+        letter-spacing: 1px;        
+    }
+    
+
+} */

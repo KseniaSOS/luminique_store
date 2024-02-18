@@ -10,12 +10,56 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {{ products }}
-            </div>
-        </div>
-
+<div class="overlay"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col text-center mt-3">
+      <h2>Products</h2>
     </div>
+  </div>
+  <div class="row">
+    <!-- All Products -->
+    <div class="col-10 offset-1 mt-3">
+      <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="card mb-4 border-0 shadow p-3 bg-white rounded card-text">
+            <div class="card-body">
+              <div class="image-container img-zoom rounded">
+                {% if product.image %}
+                <a href="">
+                  <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                  <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+              </div>
+              <h4 class="card-title mt-3">{{ product.name }}</h4>
+              {% if product.rating %}
+              <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star"></i>
+                {{ product.rating }} / 5</p>
+              {% else %}
+              <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star"></i> No rating yet
+              </p>
+              {% endif %}
+              <p class="mb-1 small text-muted card-text lead"><i class="fa-solid fa-euro-sign"></i> 
+                <strong>
+                  {{ product.price }}
+              </strong>                
+              </p>              
+            </div>
+          </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
