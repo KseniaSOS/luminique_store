@@ -61,10 +61,10 @@
                         Categories
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-
-                        <li><a class="dropdown-item" href="">Earrings</a></li>
-                        <li><a class="dropdown-item" href="">Bracelets</a></li>
-                        <li><a class="dropdown-item" href="">Necklaces</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=earrings">Earrings</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=bracelets">Bracelets</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=necklaces">Necklaces</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=earrings,bracelets,necklaces">All Categories</a></li>
                     </ul>
                 </li>
                 <li class="nav-item nav-items dropdown">
@@ -74,9 +74,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
 
-                        <li><a class="dropdown-item" href="">New Arrivals</a></li>
-                        <li><a class="dropdown-item" href="">Deals</a></li>
-                        <li><a class="dropdown-item" href="">All Specials</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=deals">Deals</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals,deals,all_specials">All Specials</a></li>
                     </ul>
                 </li>
                 <li class="nav-item nav-items dropdown">
@@ -84,7 +84,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         LUMINIQUE Blog
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
 
                         <li><a class="dropdown-item" href="">Trends</a></li>
                         <li><a class="dropdown-item" href="">Tips</a></li>
@@ -106,7 +106,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>
                         Account
                     </a>
-                    <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdownMyAccount">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMyAccount">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li>

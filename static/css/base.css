@@ -115,17 +115,6 @@ h2 {
 
 } */
 
-/* .img-zoom {
-    overflow: hidden;
-}
-
-.img-zoom img {
-    transition: transform .4s ease;
-}
-
-.img-zoom:hover img {
-    transform: scale(1.2);
-} */
 
 .card { 
     overflow: hidden;
