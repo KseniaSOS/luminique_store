@@ -29,6 +29,13 @@
       <div class="col-12 col-md-6 col-lg-4">
         <div class="product-detail">
           <h4 class="card-title mt-3">{{ product.name }}</h4>
+          {% if product.category %}
+          <p class="mb-1 small text-muted card-text">
+            <a href="{% url 'products' %}?category={{ product.category.name }}">
+              <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
+            </a>
+          </p>
+          {% endif %}
           {% if product.rating %}
           <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star"></i>
             {{ product.rating }} / 5</p>
