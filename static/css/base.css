@@ -128,6 +128,26 @@ h1 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+* {
+    scroll-behavior:smooth
+}
+
+.scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #5fa68a;
+    color: #000000;
+    border-radius: 1px solid #000000;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+.scrollTop:hover {
+    background-color: #000000;
+    color: #fff;    
+}
+
 @media screen and (max-width: 1400px) {
 
     .search-mob-nav {

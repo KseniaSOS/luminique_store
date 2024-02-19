@@ -55,6 +55,21 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div>  
 </div>  
+
+<!-- Top button -->
+<div onclick="scrollToTop()" class="scrollTop">Top</div>
+
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+  <script type="text/javascript">
+    function scrollToTop(){
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+{% endblock %}  
