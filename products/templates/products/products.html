@@ -65,8 +65,8 @@
                 </div>
                 <h4 class="card-title mt-3">{{ product.name }}</h4>
                 {% if product.category %}
-                <p class="mb-1 small text-muted card-text">
-                  <a href="{% url 'products' %}?category={{ product.category.name }}">
+                <p class="mb-1 small card-text">
+                  <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
                     <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
                   </a>
                 </p>

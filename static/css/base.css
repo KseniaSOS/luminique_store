@@ -39,7 +39,7 @@ body {
 }
 
 .nav-items {
-    margin-right: 40px;
+    margin-right: 20px;
     padding: 5px;
 }
 
@@ -147,6 +147,18 @@ h1 {
     background-color: #000000;
     color: #fff;    
 }
+
+/* Product detail */
+
+.accordion-button:not(.collapsed) {
+    color: #000000 !important;
+    background-color: #5fa68a !important;
+}
+
+.accordion-button:focus { 
+    border-color:  #5fa68a !important;
+}
+
 
 @media screen and (max-width: 1400px) {
 
