@@ -136,7 +136,7 @@
                     </ul>
                 </li>
                 <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link nav-links ml-2 icon" href=""><i class="fa-solid fa-basket-shopping"></i>
+                    <a class="nav-link nav-links ml-2 icon" href="{% url 'view_bag' %}"><i class="fa-solid fa-basket-shopping"></i>
                         {% if grand_total %}
                         <strong>€{{ grand_total|floatformat:2 }}</strong>
                         {% else %}
