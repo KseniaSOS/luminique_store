@@ -14,11 +14,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h1>My Shopping Bag</h1>
+            <h1>My Shopping Bag</h1>            
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-8 text-center mt-3">
+            <hr>
             {% if bag_items %}
             <div class="table-responsive">
                 <table class="table">
@@ -41,24 +42,33 @@
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <form class="form update-form" method="POST" action="">
+                                {% csrf_token %}
+                                <input class="form-control form-control-sm qty_input text-center" style="margin: 0 auto; 
+                                width:250px;" type="number" name="quantity"
+                                    value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                                    id="id_qty_{{ item.item_id }}">                                
+                            </form>
+                            <a class="update-link btn"><small>Update</small></a>
+                            <a class="remove-item btn text-danger" id="remove_{{ item.item_id }}"
+                                data-product_size="{{ item.size }}"><small>Remove</small></a>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr class="table-success">
                         <td colspan="5" class="pt-5">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-warning">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                                You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
                                 more!
                             </p>
                             {% endif %}
@@ -66,8 +76,8 @@
                     </tr>                    
                 </table>
             </div>
-            {% else %}
-            <h3 class="mb-5">Your bag is empty</h3>
+            {% else %}            
+            <h3 class="mb-5">Your bag is empty <i class="fa-solid fa-basket-shopping fa-xl" style="color: #5fa68a;"></i></h3>
             <div class="text-center mb-4">
                 <a href="{% url 'products' %}" class="btn btn-outline-dark">
                     <span class="icon">
@@ -80,4 +90,32 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    });
+
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];        
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,            
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    });
+</script>
+
 {% endblock %}

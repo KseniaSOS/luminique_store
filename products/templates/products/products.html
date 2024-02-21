@@ -66,13 +66,13 @@
                 <h4 class="card-title mt-3">{{ product.name }}</h4>
                 {% if product.category %}
                 <p class="mb-1 small card-text">
-                  <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                  <a class="text-muted text-decoration-none cat-color" href="{% url 'products' %}?category={{ product.category.name }}">
                     <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
                   </a>
                 </p>
                 {% endif %}
                 {% if product.rating %}
-                <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star"></i>
+                <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star" style="color: #eeee12;"></i>
                   {{ product.rating }} / 5</p>
                 {% else %}
                 <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star"></i> No rating yet
