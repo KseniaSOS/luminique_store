@@ -4,7 +4,8 @@ html {
 
 body {
     font-family: "Oswald", sans-serif;
-    color:  #000000;    
+    color:  #000000;
+    letter-spacing: 0.5px;
 }
 
 /* Navbar */
@@ -111,9 +112,9 @@ h1 {
     text-transform: uppercase;
 }
 
-/* .card-text {
-
-} */
+.cat-color {
+    color: #5fa68a !important;
+}
 
 
 .card { 
@@ -129,7 +130,7 @@ h1 {
 }
 
 * {
-    scroll-behavior:smooth
+    scroll-behavior: smooth;
 }
 
 .scrollTop {
@@ -149,6 +150,19 @@ h1 {
 }
 
 /* Product detail */
+
+.btn-green {
+    background: white;
+    color: #000000 !important;
+    border: 1px solid #000000;       
+}
+
+.btn-green:hover, 
+.btn-green:active, 
+.btn-green:focus {
+    background-color: #5fa68a;
+    color: #000000 !important;
+}
 
 .accordion-button:not(.collapsed) {
     color: #000000 !important;
