@@ -40,7 +40,7 @@ body {
 }
 
 .nav-items {
-    margin-right: 20px;
+    margin-right: 5px;
     padding: 5px;
 }
 
@@ -116,6 +116,9 @@ h1 {
     color: #5fa68a !important;
 }
 
+.cat{
+    border: none !important;   
+} 
 
 .card { 
     overflow: hidden;
@@ -130,7 +133,7 @@ h1 {
 }
 
 * {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
 }
 
 .scrollTop {
@@ -144,6 +147,7 @@ h1 {
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
+
 .scrollTop:hover {
     background-color: #000000;
     color: #fff;    

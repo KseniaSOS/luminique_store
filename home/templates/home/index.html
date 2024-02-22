@@ -56,7 +56,36 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>  
-</div>  
+</div>
+
+<!-- Categories -->
+
+<div class="row col-8 row-cols-sm-3 g-4 offset-2 mt-2">  
+  <div class="col">
+    <div class="card cat">
+      <a href="{% url 'products' %}?category=bracelets">
+        <img src="/media/cat-bracelets.png" class="card-img-top" alt="Silver bracelet with semi-precious stones">  
+      </a>
+      <h5 class="card-title text-center mt-2">Bracelets</h5>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card cat">
+      <a href="{% url 'products' %}?category=earrings">
+        <img src="/media/cat-earrings.png" class="card-img-top" alt="Silver earrings with some gold and semi-precious stones">
+      </a>
+      <h5 class="card-title text-center mt-2">Earrings</h5>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card cat">
+      <a href="{% url 'products' %}?category=necklaces">
+        <img src="/media/сat-necklaces.png" class="card-img-top" alt="Silver necklace with semi-precious stones"> 
+      </a>
+      <h5 class="card-title text-center mt-2">Necklaces</h5>
+    </div>
+  </div>
+</div>
 
 <!-- Top button -->
 <div onclick="scrollToTop()" class="scrollTop">Top</div>
