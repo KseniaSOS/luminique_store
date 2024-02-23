@@ -15,7 +15,7 @@ body {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 45px;
     color: #5fa68a !important;
 }
 
@@ -60,6 +60,7 @@ input[type=search] {
 .icon {
     margin: 10px;
 }
+
 
 /* Carousel */
 
