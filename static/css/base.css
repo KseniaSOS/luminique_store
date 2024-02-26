@@ -60,6 +60,7 @@ input[type=search] {
 .icon {
     margin: 10px;
 }
+
 /* Notifications */
 
 .bag-notification-wrapper {
@@ -114,7 +115,7 @@ input[type=search] {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -200,11 +201,9 @@ h1 {
 }
 
 
-/* @media screen and (max-width: 569px) {
+@media screen and (max-width: 416px) {
 
-    .order {
-        letter-spacing: 1px;        
+    body {       
+        font-size: 14px !important;
     }
-    
-
-} */
+} 
