@@ -60,6 +60,13 @@ input[type=search] {
 .icon {
     margin: 10px;
 }
+/* Notifications */
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /* Carousel */
 
