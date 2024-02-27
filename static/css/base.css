@@ -71,34 +71,10 @@ input[type=search] {
 
 /* Carousel */
 
-.slide-1 {
-    background-color: #5fa68a;
-}
-
-.slide-2{
-    background-color: #c2c9c6
-}
-
-.carousel-img {
-    padding: 15px;
-    width: 350px;
-    margin-right: 5px;
-}
-.header-text{
-    font-size: 40px;
-    line-height: 55px;
-}
-
-.description {
-    font-size: 20px;
-    line-height: 30px;
-}
-
 .carousel-button {    
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
-    text-transform: uppercase;
-    font-size: 2rem;    
+    text-transform: uppercase;    
     border: solid;    
 }
 
@@ -207,3 +183,10 @@ h1 {
         font-size: 14px !important;
     }
 } 
+
+@media screen and (max-width: 375px) {
+
+    #carouselExampleCaptions {
+        display: none;
+    }
+}
