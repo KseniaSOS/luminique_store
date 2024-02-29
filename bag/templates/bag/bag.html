@@ -74,7 +74,23 @@
                             </p>
                             {% endif %}
                         </td>
-                    </tr>                    
+                    </tr> 
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <a href="{% url 'products' %}" class="btn btn-outline-dark">
+                                <span class="icon">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="btn btn-green">
+                                <span class="text-uppercase">Secure checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>                   
                 </table>
             </div>
             {% else %}            
@@ -85,7 +101,7 @@
                         <i class="fa-solid fa-angles-left"></i>
                     </span>
                     <span class="text-uppercase">Keep Shopping</span>
-                </a>
+                </a>                
             </div>
             {% endif %}
         </div>
