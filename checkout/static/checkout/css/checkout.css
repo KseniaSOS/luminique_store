@@ -2,7 +2,7 @@
 .stripe-style-input {
   box-sizing: border-box;
   height: 40px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border: 1px solid black;
   border-radius: 3px;
   background-color: white;
@@ -23,5 +23,17 @@
 
 .stripe-style-input::placeholder {
     color: #00000084;
-    font-size: 12px;
+    font-size: 13px;
+}
+
+select,
+select option {
+  color:#000;
+  font-size: 13px;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #00000084 !important;
+  font-size: 13px;
 }
