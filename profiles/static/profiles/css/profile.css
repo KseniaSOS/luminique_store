@@ -1,0 +1,8 @@
+.form-control,
+.form-select {    
+    padding: 8px 12px;
+    border: 1px solid black;    
+    font-size: 13px;
+    box-sizing: border-box;
+    height: 40px;
+}
