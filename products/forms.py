@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
 class ProductForm(forms.ModelForm):
@@ -6,19 +7,25 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
 
-        fields = ('category', 'name', 'price', 'description',
-                  'image', 'sku',)
+        fields = ('category','sku', 'name', 'price', 'description',
+                  'image',)
         widgets = {
                     'category': forms.Select(
-                        attrs={'class': 'form-select'}),                    
+                        attrs={'class': 'form-select'}),                       
                     }     
 
-    
-    def __init_(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        categories = Category.object.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
+    image = forms.ImageField(
+        label='Image',
+        required=False,
+        widget=CustomClearableFileInput,
+    )
 
-        self.fields['category'].choices = friendly_names
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        categories = Category.objects.all()
+        category_view_name = [(c.id, c.get_view_name()) for c in categories]
+
+        self.fields['category'].choices = category_view_name
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'rounded-1'
+            field.widget.attrs['class'] = 'border-dark rounded-1'
