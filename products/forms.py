@@ -5,7 +5,13 @@ class ProductForm(forms.ModelForm):
     """Creates Product form"""
     class Meta:
         model = Product
-        fields = '__all__'       
+
+        fields = ('category', 'name', 'price', 'description',
+                  'image', 'sku',)
+        widgets = {
+                    'category': forms.Select(
+                        attrs={'class': 'form-select'}),                    
+                    }     
 
     
     def __init_(self, *args, **kwargs):
@@ -15,4 +21,4 @@ class ProductForm(forms.ModelForm):
 
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-dark rounded-1'
+            field.widget.attrs['class'] = 'rounded-1'

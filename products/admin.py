@@ -11,9 +11,9 @@ class ProductAdmin(admin.ModelAdmin):
 
     list_display = (
         'sku',
-        'date',
         'name',
         'category',
+        'date',      
         'price',        
         'image',
     )
