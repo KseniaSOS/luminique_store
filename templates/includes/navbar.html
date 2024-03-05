@@ -105,9 +105,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMyAccount">
                         {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
+                            {% if request.user.is_superuser %}
                         <li>
-                            <a href="" class="dropdown-item">Product Menagement</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Menagement</a>
                         </li>
                         <li>
                             <a href="" class="dropdown-item">Blog Menagement</a>
@@ -116,9 +116,8 @@
                         <li>
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                         </li>
-                        <li>
-                            <a href="" class="dropdown-item">My Wishlist</a>
-                        </li>
+                        
+                        
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -126,6 +125,9 @@
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                         </li>
                         {% else %}
+                        <li>
+                            <a href="" class="dropdown-item">My Wishlist</a>
+                        </li>
                         <li>
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                         </li>
