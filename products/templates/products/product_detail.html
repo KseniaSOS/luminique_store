@@ -17,13 +17,13 @@
         <div class="col-md-6">
           {% if product.image %}
           <a href="{{ product.img.url }}" target="_blank">
-            <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}"
-              style="width: 600; height: 700;">
+            <img class="card-img-top mb-5 mb-md-0 rounded-1" src="{{ product.image.url }}" alt="{{ product.name }}"
+              style="width: 500; height: 500;">
           </a>
           {% else %}
           <a href="">
-            <img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"
-              style="width: 600; height: 700;">
+            <img class="card-img-top mb-5 mb-md-0 rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"
+              style="width: 500; height: 500;">
           </a>
           {% endif %}
         </div>

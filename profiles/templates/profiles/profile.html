@@ -37,8 +37,39 @@
             </form>
         </div>
         <div class="col ml-lg-5">
-            <h5 class="mb-5 text-center">Order History</h5>
-            {{ orders }}
+            <h5 class="mb-3 text-center">Order History</h5>
+            <div class="order-list-wrapper mt-3">
+                <table class="table table-sm table-text">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order Number</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Items</th>
+                            <th scope="col">Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td class="align-middle"><a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">
+                                    {{ order.order_number|truncatechars:5 }}
+                                </a>
+                            </td>
+                            <td class="align-middle">{{ order.date|date:"Y-m-d" }}</td>
+                            <td class="align-middle">
+                                {% for item in order.lineitems.all %}
+                                {{ item.product.name }} x
+                                {{ item.quantity }}
+                                <br>
+                                {% endfor %}
+                            </td>
+                            <td class="align-middle">€{{ order.grand_total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>    
     </div>    
 </div>
