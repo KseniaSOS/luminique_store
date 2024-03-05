@@ -58,8 +58,7 @@
                                     id="id_qty_{{ item.item_id }}">                                
                             </form>
                             <a class="update-link btn"><small>Update</small></a>
-                            <a class="remove-item btn text-danger" id="remove_{{ item.item_id }}"
-                                data-product_size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="remove-item btn text-danger" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>

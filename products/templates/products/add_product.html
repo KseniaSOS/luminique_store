@@ -15,11 +15,11 @@
         <div class="row">
             <div class="col text-center m-4">
                 <h1>Product Management</h1>
-                <h4>Add a Product</h4>                      
+                <h4>Add a Product</h4>                                  
             </div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="ol-12 col-lg-6 mb-5">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}

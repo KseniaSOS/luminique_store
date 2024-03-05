@@ -75,14 +75,20 @@
                 <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i>
                   {{ product.rating }} / 5</p>
                 {% else %}
-                <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star"></i> No rating yet
+                <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i> No rating yet
                 </p>
                 {% endif %}
                 <p class="mb-1 small text-muted card-text lead"><i class="fa-solid fa-euro-sign"></i> 
                   <strong>
                     {{ product.price }}
                 </strong>                
-                </p>              
+                </p>
+                {% if request.user.is_superuser %}
+                <small>
+                  <a href="{% url 'edit_product' product.id %}" class="text-muted">Edit</a> |
+                  <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                </small>
+                {% endif %}           
               </div>
             </div>
           </div>
