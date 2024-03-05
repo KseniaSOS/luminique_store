@@ -1,0 +1,22 @@
+Hello {{ order.full_name }},
+
+This is a confirmation of your order at Luminique Store. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: €{{ order.order_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+We have your contact number: {{ order.phone_number }} and our delivery team may contact you prior to delivery.
+
+If you have any questions or concerns, feel free to reach out to us at {{ contact_email }}.
+
+Thank you for choosing Luminique Store for your jewelry needs!
+
+Best regards,
+
+Luminique Store
