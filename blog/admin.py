@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Blog, BlogCategory
+from .models import Post, PostCategory
 
 
-@admin.register(BlogCategory)
-class BlogCategoryAdmin(admin.ModelAdmin):
+@admin.register(PostCategory)
+class PostCategoryAdmin(admin.ModelAdmin):
     """
     Adds fields to the admin area 
     """
@@ -13,8 +13,8 @@ class BlogCategoryAdmin(admin.ModelAdmin):
 
 
 
-@admin.register(Blog)
-class BlogAdmin(admin.ModelAdmin):
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'excerpt', 'tag', 'created_on',
                     'author', 'featured_image', 'status',)
     search_fields = ['title', 'tag']

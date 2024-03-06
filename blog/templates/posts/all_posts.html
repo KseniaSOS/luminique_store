@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center mt-3">
+        <h1>Posts</h1>
+      </div>
+    </div>
+    
+    <!-- All Posts -->
+    
+    <!-- <div class="row">      
+      <div class="col-10 offset-1 mt-3">
+        <div class="row">
+          {% for product in products %}
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card mb-4 border-0 shadow p-3 bg-white rounded card-text card-hover">
+              <div class="card-body">
+                <div class="image-container rounded">
+                  {% if product.image %}
+                  <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                  </a>
+                  {% else %}
+                  <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                  </a>
+                  {% endif %}
+                </div>
+                <h4 class="card-title mt-3">{{ product.name }}</h4>
+                {% if product.category %}
+                <p class="mb-1 small card-text">
+                  <a class="text-muted text-decoration-none cat-color" href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
+                  </a>
+                </p>
+                {% endif %}
+                {% if product.rating %}
+                <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i>
+                  {{ product.rating }} / 5</p>
+                {% else %}
+                <p class="mb-1 small text-muted card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i> No rating yet
+                </p>
+                {% endif %}
+                <p class="mb-1 small text-muted card-text lead"><i class="fa-solid fa-euro-sign"></i> 
+                  <strong>
+                    {{ product.price }}
+                </strong>                
+                </p>
+                {% if request.user.is_superuser %}
+                <small>
+                  <a href="" class="text-muted">Edit</a> |
+                  <a href="" class="text-danger">Delete</a>
+                </small>
+                {% endif %}           
+              </div>
+            </div>
+          </div>
+          {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>      
+    </div>
+    <div onclick="scrollToTop()" class="scrollTop rounded-1">Top</div>
+  </div> -->
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+  <script type="text/javascript">
+    function scrollToTop(){
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+{% endblock %}
