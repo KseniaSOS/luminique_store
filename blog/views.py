@@ -92,3 +92,17 @@ def edit_post(request, slug):
         'post': post,
     }
     return render(request, template, context)
+
+
+@login_required
+def delete_post(request, slug):
+    """ This view deletes apost from the blog """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have access to this page!')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    messages.success(request, 'Successfully deleted post!')
+    return redirect(reverse('posts'))

@@ -21,10 +21,17 @@
     {% else %}
     <div class="row">
         <div class="col text-center m-4">
-            <h1>{{ post.title }}</h1>                       
+            <h1>{{ post.title }}</h1>
+            <p class="text-center m-4">
+                <a href="{% url 'posts' %}?tag=trends,tips,inspiration" class="btn btn-green btn-sm">All Posts</a>
+                {% if request.user.is_superuser %}
+                <a href="{% url 'edit_post' post.slug %}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger btn-sm">Delete</a>
+                {% endif %}
+            </p>
         </div>
     </div>
-    <div class="row m-4">
+    <div class="row m-2">
         <div class="col-12 col-lg-6 order-lg-2">
             <div class="text-body">
                 <p>{{ post.content }}</p>
@@ -33,9 +40,9 @@
         <div class="col-12 col-lg-6">
             <div class="image-container">
                 {% if post.featured_image %}
-                <img class="mb-3 img-fluid rounded-1 shadow" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                <img class="mb-3 img-fluid rounded-1" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                 {% else %}
-                <img class="mb-3 img-fluid rounded-1 shadow" src=" {{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
+                <img class="mb-3 img-fluid rounded-1" src=" {{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
                 {% endif %}
             </div>
         </div>
