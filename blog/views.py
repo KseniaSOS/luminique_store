@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.utils.text import slugify
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Post, PostCategory
 from .forms import PostForm
@@ -36,10 +38,26 @@ def post_detail(request, slug):
     return render(request, 'posts/post_detail.html', context)
 
 
-
+@login_required
 def add_post(request):
     """ Add a post to the blog """
-    form = PostForm()
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.instance.author = request.user
+            form.instance.slug = slugify(form.instance.title)
+            post = form.save()
+            messages.success(request, 'The Post is added Successfully!')
+            return redirect(
+                reverse('post_detail', args=[form.instance.slug]))
+        else:
+            messages.error(request,
+                           'Failed to add post. '
+                           'Please ensure the form is valid.')
+    else:
+        form = PostForm()
+    
     template = 'posts/add_post.html'
     context = {
         'form': form,
