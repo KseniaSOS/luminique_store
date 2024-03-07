@@ -240,6 +240,13 @@ https://www.youtube.com/watch?v=hr4JiDr7Aec */
     cursor: pointer;
 }
 
+/* Posts */
+
+a.tag-badge > span.badge:hover {
+    background: #5fa68a !important;
+    color: #000000 !important;
+}
+
 @media screen and (max-width: 1400px) {
 
     .search-mob-nav {

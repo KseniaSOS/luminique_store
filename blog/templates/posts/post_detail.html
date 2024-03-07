@@ -24,8 +24,8 @@
             <h1>{{ post.title }}</h1>                       
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-lg-6 order-lg-2 mb-5">
+    <div class="row m-4">
+        <div class="col-12 col-lg-6 order-lg-2">
             <div class="text-body">
                 <p>{{ post.content }}</p>
             </div>
@@ -33,9 +33,9 @@
         <div class="col-12 col-lg-6">
             <div class="image-container">
                 {% if post.featured_image %}
-                <img class="mb-3 img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                <img class="mb-3 img-fluid rounded-1 shadow" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                 {% else %}
-                <img class="mb-3 img-fluid" src=" {{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
+                <img class="mb-3 img-fluid rounded-1 shadow" src=" {{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
                 {% endif %}
             </div>
         </div>

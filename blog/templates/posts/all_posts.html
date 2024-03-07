@@ -13,8 +13,13 @@
   <div class="overlay"></div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col text-center mt-3">
+      <div class="col text-center m-3">
         <h1>Luminique Blog</h1>
+        {% for c in tag %}
+        <a class="tag-badge text-decoration-none" href="{% url 'posts' %}?tag={{ c.name }}">
+          <span class="p-2 mt-2 badge badge-white rounded-1 border text-dark border-dark text-uppercase">{{ c.name }}</span>
+        </a>
+        {% endfor %}
       </div>
     </div>   
     <!-- All Posts -->
@@ -28,11 +33,11 @@
                 <div class="image-container rounded">
                   {% if post.featured_image %}
                   <a href="{% url 'post_detail' post.slug %}">
-                    <img class="card-img-top img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                    <img class="card-img-top img-fluid rounded-1" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                   </a>
                   {% else %}
                   <a href="{% url 'post_detail' post.slug %}">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
+                    <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
                   </a>
                   {% endif %}
                 </div>
