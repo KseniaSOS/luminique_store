@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+
+
 from .models import Post, PostCategory
+from .forms import PostForm
 
 def all_posts(request):
     """A view to show all posts in Blog"""
@@ -31,4 +34,14 @@ def post_detail(request, slug):
     }
 
     return render(request, 'posts/post_detail.html', context)
- 
+
+
+
+def add_post(request):
+    """ Add a post to the blog """
+    form = PostForm()
+    template = 'posts/add_post.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
