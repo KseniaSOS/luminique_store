@@ -63,3 +63,32 @@ def add_post(request):
         'form': form,
     }
     return render(request, template, context)
+
+
+@login_required
+def edit_post(request, slug):
+    """Edit a posts in the blog"""
+
+    post = get_object_or_404 (Post, slug=slug)
+    if request.method == 'POST':
+        form = PostForm(
+            request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.instance.author = request.user
+            form.instance.slug = slugify(form.instance.title)
+            form.save()
+            messages.success(request, f'The Post - {post.title} is updated successfully!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(request, 'Failed to update blog post. '
+                           'Please ensure the form is valid.')
+    else:
+        form = PostForm(instance=post)
+        messages.info(request, f'You are editing {post.title}.')
+
+    template = 'posts/edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
+    }
+    return render(request, template, context)
