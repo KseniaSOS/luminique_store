@@ -1,4 +1,4 @@
-from django.shortcuts import render, request
+from django.shortcuts import render
 from .models import Post
 
 def all_posts(request):
