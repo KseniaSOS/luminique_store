@@ -27,26 +27,26 @@
               <div class="card-body">
                 <div class="image-container rounded">
                   {% if post.featured_image %}
-                  <a href="">
+                  <a href="{% url 'post_detail' post.slug %}">
                     <img class="card-img-top img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                   </a>
                   {% else %}
-                  <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+                  <a href="{% url 'post_detail' post.slug %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.featured_image }}">
                   </a>
                   {% endif %}
                 </div>
                 <h2 class="card-title mt-3">{{ post.title }}</h2>
                 {% if post.tag %}
                 <p class="mb-1 small card-text">
-                  <a class="text-muted text-decoration-none cat-color" href="{% url 'posts' %}?tag={{ post.tag }}">
-                    <i class="fa-regular fa-gem"></i> {{ post.tag }}
+                  <a class="text-muted text-decoration-none cat-color" href="{% url 'posts' %}?tags={{ post.tag.name }}">
+                    <i class="fa-regular fa-gem"></i> {{ post.tag.name }}
                   </a>
                 </p>
                 {% endif %}
                 <p class="card-text mb-3">{{ post.excerpt }}</p>
                 <p class="card-text">
-                  <a href="" class="btn btn-green btn-sm">Read More</a>
+                  <a href="{% url 'post_detail' post.slug %}" class="btn btn-green btn-sm">Read More</a>
                 </p>             
                 {% if user.id == post.author.id %}
                 <small>

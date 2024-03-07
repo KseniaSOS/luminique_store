@@ -82,10 +82,10 @@
                         Blog
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlog">                        
-                        <li><a class="dropdown-item" href="">Trends</a></li>
-                        <li><a class="dropdown-item" href="">Tips</a></li>
-                        <li><a class="dropdown-item" href="">Inspiration</a></li>
-                        <li><a class="dropdown-item" href="{% url 'posts' %}">All Posts</a></li>
+                        <li><a class="dropdown-item" href="{% url 'posts' %}?tag=trends">Trends</a></li>
+                        <li><a class="dropdown-item" href="{% url 'posts' %}?tag=tips">Tips</a></li>
+                        <li><a class="dropdown-item" href="{% url 'posts' %}?tag=inspiration">Inspiration</a></li>
+                        <li><a class="dropdown-item" href="{% url 'posts' %}?tag=trends,tips,inspiration">All Posts</a></li>
                     </ul>
                 </li>
             </ul>
