@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h1>My Wishlist</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            {% if products %}
+            {% for product in products %}
+            <div class="card mb-3">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-4 img-fluid d-block p-2">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid rounded-1" src="{{ product.image.url }}"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">Price: €{{ product.price }}</p>
+                            <a class="btn btn-danger btn-sm rounded mt-5 text-uppercase" href="">Remove From
+                                Wishlist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p class=" card-text text-danger">You have no products in your wishlist yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
