@@ -3,9 +3,10 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
+from profiles.models import UserProfile
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -65,12 +66,37 @@ def product_detail(request, product_id):
     A view to show product detailed view.    
     """
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.order_by('created_on')
+    profile = get_object_or_404(UserProfile, user=request.user)
+    
+    if request.method == 'POST':        
+       
+        if not request.user:
+            messages.error(request, 'Sorry, you must login to do that.')
+            return redirect(reverse('products'))
+        else:
+            form = ReviewForm(request.POST, request.FILES,)
+            if form.is_valid():
+                form.instance.name = request.user.username
+                review = form.save(commit=False)
+                review.product = product
+                review.save()
+                messages.success(
+                    request,
+                    'Successfully posted a review.'
+                )
+                return redirect(reverse('product_detail', args=[product.id]))       
+    else:
+        form = ReviewForm(initial={'name': profile.user, })
 
+    template = 'products/product_detail.html'
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': ReviewForm(),
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, template, context)
 
 
 @login_required

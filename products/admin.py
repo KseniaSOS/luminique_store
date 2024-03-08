@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Review
 
 
 @admin.register(Product)
@@ -28,3 +28,15 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (        
         'name',        
     )
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    """  
+    This class adds fields from the Review model to the admin
+    panel
+    """
+
+    list_display = ('name', 'body', 'product', 'created_on',)
+    list_filter = ('created_on',)
+    search_fields = ['name'] 
+    
