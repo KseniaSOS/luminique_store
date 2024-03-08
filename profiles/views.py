@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -69,6 +69,7 @@ def wishlist(request):
 
     return render(request, template, context)
 
+
 @login_required
 def add_to_wishlist(request, id):
     """Add product to the wishlist"""
@@ -86,3 +87,16 @@ def add_to_wishlist(request, id):
             request, 'Added ' + product.name + ' to your wishlist')
 
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+@login_required
+def remove_wishlist(request, id):
+    """Remove a product from the
+    users wishlist"""
+
+    product = get_object_or_404(Product, id=id)
+    template = 'profiles/remove_wishlist.html'
+    context = {
+        'product': product,
+    }
+    return render(request, template, context)

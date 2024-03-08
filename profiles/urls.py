@@ -7,4 +7,6 @@ urlpatterns = [
     path('wishlist/add_to_wishlist/<int:id>', views.add_to_wishlist,
          name='add_to_wishlist'),
     path('wishlist/', views.wishlist, name='wishlist'),
+    path('wishlist/remove/<int:id>', views.remove_wishlist, name='remove_wishlist'),
+
 ]

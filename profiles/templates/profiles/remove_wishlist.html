@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center m-3">
+                <h1>My Wishlist</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-6">
+                <p>Are you sure you want to remove {{ product.name }} from your wishlist?<br></p>
+                <a class="btn btn-outline-danger mt-5"
+                    href="{% url 'add_to_wishlist' product.id %}">Remove From Wishlist</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
