@@ -84,7 +84,23 @@ input[type=search] {
 
 .carousel-caption p {
     font-size: 15px;
+    font-weight: 200 !important;
 }
+
+.carousel-text h1 {
+    font-size: 3.5rem;
+}
+
+.carousel-text {   
+   text-transform: uppercase;
+   font-size: 3rem;
+   color: #000000;
+   position: absolute;
+   bottom: 20%;
+   left: 68%;
+   right: 5%;   
+}
+
 
 /* Products */
 
@@ -229,7 +245,7 @@ h1 {
 /* add text overlay to img on hover
 https://www.youtube.com/watch?v=hr4JiDr7Aec */
 
-#blog-hover {
+.blog-hover {
     width: 100%;
     height: 100%;
     top: 0;
@@ -245,7 +261,7 @@ https://www.youtube.com/watch?v=hr4JiDr7Aec */
     color: white !important;
 }
 
-#blog-hover:hover {
+.blog-hover:hover {
    opacity: 1; 
 }
 
@@ -264,6 +280,18 @@ a.tag-badge > span.badge:hover {
     color: #000000 !important;
 }
 
+.footer-logo {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #5fa68a !important;
+    
+}
+
+
+
 @media screen and (max-width: 1400px) {
 
     .search-mob-nav {
@@ -271,6 +299,41 @@ a.tag-badge > span.badge:hover {
         width: 200px !important;
     }
 }
+
+@media screen and (max-width: 1100px) {
+
+    .carousel-text,
+    .carousel-text h1 {
+        font-size: 2.5rem;        
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+
+    .carousel-text,
+    .carousel-text h1 {
+        font-size: 1.5rem;        
+    }    
+}
+
+@media screen and (max-width: 650px) {
+
+    .carousel-text,
+    .carousel-text h1 {
+        font-size: 1.5rem;        
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .carousel-text,
+    .carousel-text h1 {
+        font-size: 1rem;        
+    }
+}
+
+
 
 
 @media screen and (max-width: 416px) {

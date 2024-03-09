@@ -28,18 +28,22 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/media/carousel-2.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h1 class="text-uppercase text-dark">Luminique</h1>
-        <p class="text-dark">It is time for presents ...</p>        
+      <img src="/media/carousel-3.jpg" class="d-block w-100" alt="New arrivals, spring collection 2024">
+      <div class="carousel-text text-center d-none d-sm-block">        
+        <div class="my-2">
+          <h1>New Arrivals</h1>
+          <p>spring collection</p>
+          <a href="{% url 'products' %}?category=new_arrivals" class="btn btn-outline-dark carousel-button py-2">Shop Now</a>
+        </div>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/media/carousel-3.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h1 class="text-uppercase text-dark">Luminique</h1>
-        <div class="my-2">
-          <a href="{% url 'products' %}" class="btn btn-outline-dark btn-sm carousel-button py-2">Shop Now</a>
+      <img src="/media/carousel-2.jpg" class="d-block w-100" alt="Big sale upto 50% off">
+      <div class="carousel-text text-center d-none d-sm-block">        
+        <div class="my-2 ">
+          <h1>Big sale</h1>
+          <p>upto 50% off</p>
+          <a href="{% url 'products' %}?category=deals" class="btn btn-outline-dark carousel-button py-2">Shop Now</a>
         </div>
       </div>
     </div>
@@ -100,7 +104,7 @@
       <div class="card blog-card mb-5">
         <a href="{% url 'posts' %}?tag=trends">
           <img src="/media/blog_1.jpg" class="img-fluid" alt="A woman wearing jewelry">
-          <h2 id="blog-hover" class="text-muted">#Trends</h2>
+          <h2 class="text-muted blog-hover">#Trends</h2>
         </a>
       </div>
     </div>
@@ -108,7 +112,7 @@
       <div class="card blog-card mb-5">
         <a href="{% url 'posts' %}?tag=tips">
           <img src="/media/blog_3.jpg" class="img-fluid" alt="A set of jewelry">
-          <h2 id="blog-hover" class="text-muted">#Tips</h2>
+          <h2 class="text-muted blog-hover">#Tips</h2>
         </a>
       </div>
     </div>
@@ -116,7 +120,7 @@
       <div class="card blog-card mb-5">
         <a href="{% url 'posts' %}?tag=inspiration">
           <img src="/media/blog_2.jpg" class="img-fluid" alt="A master creates a jewelry">
-          <h2 id="blog-hover" class="text-muted">#Inspiration</h2>
+          <h2 class="text-muted blog-hover">#Inspiration</h2>
         </a>
       </div>
     </div>
