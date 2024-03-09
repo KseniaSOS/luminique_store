@@ -28,4 +28,4 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-handler404 = "sweetcode.views.page_not_found"
+handler404 = "luminque.views.page_not_found"
