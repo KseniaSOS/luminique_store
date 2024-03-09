@@ -38,6 +38,8 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)    
     image = models.ImageField(null=True, blank=True)
     users_wishlist = models.ManyToManyField(User)
+    on_sale = models.BooleanField(default=False)
+    sale_price = models.DecimalField(default=0, max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.name

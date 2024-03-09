@@ -132,6 +132,20 @@ h1 {
     scroll-behavior: smooth;    
 }
 
+#sale-badge {
+    top: 3rem;
+    right: 3rem;
+}
+#sale-badge-detail {
+    top: 3rem;
+    right: 3rem;
+}
+
+#sale{
+    text-decoration: line-through; 
+    color: red;
+}
+
 .scrollTop {
     position: fixed;
     bottom: 30px;
@@ -150,7 +164,6 @@ h1 {
 }
 
 /* Product detail */
-
 
 .btn-green {
     background: white;

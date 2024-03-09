@@ -49,52 +49,110 @@
       <div class="col-10 offset-1 mt-3">
         <div class="row">
           {% for product in products %}
-          <div class="col-lg-4 col-md-4 col-sm-10">
-            <div class="card mb-4 border-0 shadow p-3 bg-white rounded card-text card-hover">
-              <div class="card-body">
-                <div class="image-container rounded">
-                  {% if product.image %}
-                  <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid rounded-1" src="{{ product.image.url }}" alt="{{ product.name }}">
-                  </a>
-                  {% else %}
-                  <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                  </a>
+            {% if product.on_sale %}
+            <div class="col-lg-4 col-md-4 col-sm-10">
+              <div class="card mb-4 border-0 shadow p-3 bg-white rounded card-text card-hover">
+                <div class="card-body">
+                  <div class="image-container rounded">
+                    <!-- Sale bagde -->
+                    <div id="sale-badge" class="badge bg-secondary bg-danger position-absolute text-uppercase">
+                      Sale
+                    </div>
+                    <!-- product image -->
+                    {% if product.image %}
+                    <a href="{% url 'product_detail' product.id %}">
+                      <img class="card-img-top img-fluid rounded-1" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' product.id %}">
+                      <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                  </div>
+                  <h4 class="card-title mt-3">{{ product.name }}</h4>
+                  {% if product.category %}
+                  <p class="mb-1 small card-text">
+                    <a class="text-decoration-none cat-color" href="{% url 'products' %}?category={{ product.category.name }}">
+                      <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
+                    </a>
+                  </p>
                   {% endif %}
-                </div>
-                <h4 class="card-title mt-3">{{ product.name }}</h4>
-                {% if product.category %}
-                <p class="mb-1 small card-text">
-                  <a class="text-decoration-none cat-color" href="{% url 'products' %}?category={{ product.category.name }}">
-                    <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
-                  </a>
-                </p>
-                {% endif %}
-                {% if product.rating %}
-                <p class="mb-1 small card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i>
-                  {{ product.rating }} / 5</p>
-                {% else %}
-                <p class="mb-1 small card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i> No rating yet
-                </p>
-                {% endif %}                
-                <p class="mb-1 small  card-text lead"><i class="fa-solid fa-euro-sign"></i> 
-                  <strong>
+                  {% if product.rating %}
+                  <p class="mb-1 small card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i>
+                    {{ product.rating }} / 5</p>
+                  {% else %}
+                  <p class="mb-1 small card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i> No rating yet
+                  </p>
+                  {% endif %}                
+                  <p class="mb-1 small card-text" id="sale"><i class="fa-solid fa-euro-sign"></i>
                     {{ product.price }}
-                </strong>                
-                </p>
-                {% if request.user.is_superuser %}
-                <small>
-                  <a href="{% url 'edit_product' product.id %}" class="text-muted">Edit</a> |
-                  <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
-                </small>
-                {% endif %}           
+                  </p>
+                  <p class="mb-1 small card-text lead"><i class="fa-solid fa-euro-sign"></i> 
+                    <strong>
+                      {{ product.sale_price }}                     
+                    </strong>                
+                  </p>
+                  {% if request.user.is_superuser %}
+                  <small>
+                    <a href="{% url 'edit_product' product.id %}" class="text-muted">Edit</a> |
+                    <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                  </small>
+                  {% endif %}           
+                </div>
               </div>
             </div>
-          </div>
           {% if forloop.counter|divisibleby:3 %}
         </div>
         <div class="row">
+          {% endif %}
+            {% else %}  
+            <div class="col-lg-4 col-md-4 col-sm-10">
+              <div class="card mb-4 border-0 shadow p-3 bg-white rounded card-text card-hover">
+                <div class="card-body">
+                  <div class="image-container rounded">
+                    {% if product.image %}
+                    <a href="{% url 'product_detail' product.id %}">
+                      <img class="card-img-top img-fluid rounded-1" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' product.id %}">
+                      <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                  </div>
+                  <h4 class="card-title mt-3">{{ product.name }}</h4>
+                  {% if product.category %}
+                  <p class="mb-1 small card-text">
+                    <a class="text-decoration-none cat-color" href="{% url 'products' %}?category={{ product.category.name }}">
+                      <i class="fa-regular fa-gem"></i> {{ product.category.view_name }}
+                    </a>
+                  </p>
+                  {% endif %}
+                  {% if product.rating %}
+                  <p class="mb-1 small card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i>
+                    {{ product.rating }} / 5</p>
+                  {% else %}
+                  <p class="mb-1 small card-text"><i class="fa-solid fa-star" style="color: #ffc107;"></i> No rating yet
+                  </p>
+                  {% endif %}                
+                  <p class="mb-1 small  card-text lead"><i class="fa-solid fa-euro-sign"></i> 
+                    <strong>
+                      {{ product.price }}
+                  </strong>                
+                  </p>
+                  {% if request.user.is_superuser %}
+                  <small>
+                    <a href="{% url 'edit_product' product.id %}" class="text-muted">Edit</a> |
+                    <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                  </small>
+                  {% endif %}           
+                </div>
+              </div>
+            </div>
+          {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+          {% endif %}
           {% endif %}
           {% endfor %}
         </div>
