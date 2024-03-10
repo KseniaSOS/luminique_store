@@ -11,7 +11,11 @@ class ProductForm(forms.ModelForm):
                   'image', 'on_sale', 'sale_price',)
         widgets = {
                     'category': forms.Select(
-                        attrs={'class': 'form-select'}),                       
+                        attrs={'class': 'form-select'}),
+                    'price': forms.NumberInput(
+                        attrs={'min': '1', 'max': '5000'}),
+                    'sale_price': forms.NumberInput(
+                        attrs={'min': '1', 'max': '5000'}),
                     }     
 
     image = forms.ImageField(
