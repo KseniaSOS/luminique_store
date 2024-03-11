@@ -1,4 +1,4 @@
-<footer class="footer container-fluid d-flex flex-column align-items-center mt-5 py-3 bg-dark">
+<footer class="mt-auto text-center bg-dark">
 
     <!-- Social Media Section -->
     <div class="mb-1">
@@ -15,9 +15,14 @@
             aria-label="Visit our Pinterest page (opens in a new tab)" role="button"><i
                 class="fa-brands fa-pinterest fa-lg"></i></a>
     </div>
-    <div class="text-white text-center footer-font">        
-        <a class="footer-logo text-center" href="https://luminique-3d156ce4ed79.herokuapp.com/" target="_blank"
+    <div class="text-white text-center footer-font">
+        <div>
+            <a class="footer-logo text-center" href="https://luminique-3d156ce4ed79.herokuapp.com/" target="_blank"
             rel="noopener">Luminique</a>
+        </div>       
+        <div>
+            <a class="text-muted" href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>        
         <p>Ksenia Sossin</p>
         <p>&copy; 2024</p>
     </div>

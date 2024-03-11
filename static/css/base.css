@@ -280,31 +280,31 @@ a.tag-badge > span.badge:hover {
     color: #000000 !important;
 }
 
-.footer-logo {
-    font-family: "Protest Strike", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 25px;
-    color: #5fa68a !important;
-    
-}
+
 
 /* Mailchimp */
 
 #mc_embed_signup {
-    background:#5fa68a !important;    
+    background:#ffffff;    
     font-family: "Oswald", sans-serif;
     color:  #000000;
     letter-spacing: 0.5px;
     width: 600px;
 }
 
-.newsletter-bg {
+/* .newsletter-bg {
     background:#5fa68a !important;
+} */
+
+/* footer */
+.footer-logo {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #5fa68a !important;    
 }
-
-
 
 @media screen and (max-width: 1400px) {
 

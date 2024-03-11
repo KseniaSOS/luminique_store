@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+def privacy_policy(request):
+    """
+    This view renders the privacy page
+    """
+    return render(request, 'home/privacy_policy.html')
+
+
 def index(request):
     """A view to return the index page"""
 
