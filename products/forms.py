@@ -13,9 +13,9 @@ class ProductForm(forms.ModelForm):
                     'category': forms.Select(
                         attrs={'class': 'form-select'}),
                     'price': forms.NumberInput(
-                        attrs={'min': '1', 'max': '5000'}),
+                        attrs={'min': '0', 'max': '5000'}),
                     'sale_price': forms.NumberInput(
-                        attrs={'min': '1', 'max': '5000'}),
+                        attrs={'min': '0', 'max': '5000'}),
                     }     
 
     image = forms.ImageField(
