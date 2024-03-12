@@ -285,16 +285,16 @@ a.tag-badge > span.badge:hover {
 /* Mailchimp */
 
 #mc_embed_signup {
-    background:#ffffff;    
+    background:#d4e7dd !important;    
     font-family: "Oswald", sans-serif;
     color:  #000000;
     letter-spacing: 0.5px;
     width: 600px;
 }
 
-/* .newsletter-bg {
-    background:#5fa68a !important;
-} */
+.newsletter-bg {
+    background-color: #d4e7dd;
+}
 
 /* footer */
 .footer-logo {
