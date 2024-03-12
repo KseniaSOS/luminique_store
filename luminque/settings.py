@@ -231,7 +231,7 @@ STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'test@test.com'
+    DEFAULT_FROM_EMAIL = 'info@luminique.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
