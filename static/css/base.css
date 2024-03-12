@@ -165,7 +165,7 @@ h1 {
 
 .scrollTop {
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     right: 30px;
     padding: 10px 15px;
     background-color: #5fa68a;
@@ -300,7 +300,6 @@ a.tag-badge > span.badge:hover {
     background: #d4e7dd;
 }
 
-
 /* footer */
 .footer {
     text-align: center;
@@ -311,16 +310,6 @@ a.tag-badge > span.badge:hover {
 .btn-dark {  
     border-radius: 100% !important;
 }
-
-/* .btn-social {
-    height: 2.5rem;
-    width: 2.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-radius: 100% !important;
-} */
 
 @media screen and (max-width: 1400px) {
 

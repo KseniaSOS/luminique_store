@@ -27,8 +27,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
-# DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['luminique-3d156ce4ed79.herokuapp.com', '8000-kseniasos-luminiquestor-7vug2wc8s1r.ws-eu108.gitpod.io']
 

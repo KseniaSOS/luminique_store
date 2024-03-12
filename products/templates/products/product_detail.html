@@ -19,7 +19,7 @@
       <div class="col-md-6">
         <div class="image-container">          
           {% if product.image %}
-          <a href="{{ product.img.url }}" target="_blank">
+          <a href="{{ product.img.url }}" data-bs-toggle="modal" data-bs-target="#imageModal">
             <img class="card-img-top mb-5 mb-md-0 rounded-1" src="{{ product.image.url }}" alt="{{ product.name }}">
           </a>
           {% else %}
@@ -288,6 +288,31 @@
     </div>
   </div>
 </section>
+
+
+<!-- Image Modal -->
+<div class=" modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModal" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+          <div class="modal-header text-center">
+              <h1 class="modal-title w-100" id="imageModalLabel">{{ product.name }}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              {% if product.image %}
+              <a href="{{ product.image.url }}" data-bs-toggle="modal" data-bs-target="#imageModal">
+                  <img class="card-img-top mb-5 mb-md-0 rounded-1" src="{{ product.image.url }}" alt="{{ product.name }}">
+              </a>
+              {% else %}
+              <img class="card-img-top mb-5 mb-md-0 rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+              {% endif %}
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-green text-uppercase mt-5" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div> 
+</div>
 
 {% endblock %}
 
