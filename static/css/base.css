@@ -17,7 +17,7 @@ body {
     text-transform: uppercase;
     font-size: 50px;
     color: #5fa68a !important;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 2px 2px 0px #000 !important;
 } 
 
 .contact-info {
@@ -281,7 +281,6 @@ a.tag-badge > span.badge:hover {
 }
 
 
-
 /* Mailchimp */
 
 #mc_embed_signup {
@@ -296,15 +295,32 @@ a.tag-badge > span.badge:hover {
     background-color: #d4e7dd;
 }
 
-/* footer */
-.footer-logo {
-    font-family: "Protest Strike", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 25px;
-    color: #5fa68a !important;    
+#mc_embed_signup,
+.mc-field-group {
+    background: #d4e7dd;
 }
+
+
+/* footer */
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Protest Strike", sans-serif;
+}
+
+.btn-dark {  
+    border-radius: 100% !important;
+}
+
+/* .btn-social {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 100% !important;
+} */
 
 @media screen and (max-width: 1400px) {
 

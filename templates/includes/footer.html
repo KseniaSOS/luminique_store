@@ -1,30 +1,16 @@
-<footer class="mt-auto bg-dark">    
-
-    <!-- Social Media Section -->
-    <div class="mb-1 text-center">
-        <!-- Facebook -->
-        <a class="btn btn-floating m-2 text-white" href="https://www.facebook.com/profile.php?id=61557388376030" target="_blank" rel="noopener"
-            aria-label="Visit our Facebook page (opens in a new tab)" role="button"><i
-            class="fa-brands fa-facebook fa-lg"></i></a>
-        <!-- Instagram -->
-        <a class="btn btn-floating m-2 text-white" href="https://www.instagram.com/" target="_blank" rel="noopener"
-            aria-label="Visit our Instagram page (opens in a new tab)" role="button"><i
-                class="fa-brands fa-instagram fa-lg"></i></a>
-        <!-- Pinterest -->
-        <a class="btn btn-floating m-2 text-white" href="https://www.pinterest.com/" target="_blank" rel="noopener"
-            aria-label="Visit our Pinterest page (opens in a new tab)" role="button"><i
-                class="fa-brands fa-pinterest fa-lg"></i></a>
+<footer class="footer py-4 bg-light">
+    <div class="container-fluid">        
+        <div class="row align-items-center text-center">
+            <div class="col-lg-4 text-lg-start">Copyright &copy; Luminique 2023</div>
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=61557388376030" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.pinterest.com/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a class="link-dark text-decoration-none me-3" href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                <a class="link-dark text-decoration-none" href="#!">FAQ</a>
+            </div>
+        </div>
     </div>
-    <div class="text-white text-center">
-        <div>
-            <a class="footer-logo text-center" href="https://luminique-3d156ce4ed79.herokuapp.com/" target="_blank"
-            rel="noopener">Luminique</a>
-        </div>       
-        <div>
-            <a class="text-muted" href="{% url 'privacy_policy' %}">Privacy Policy</a>
-        </div>        
-        <p>Ksenia Sossin</p>
-        <p>&copy; 2024</p>
-    </div>
-    
 </footer>
