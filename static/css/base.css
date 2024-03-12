@@ -305,11 +305,17 @@ a.tag-badge > span.badge:hover {
     text-align: center;
     font-size: 0.9rem;
     font-family: "Protest Strike", sans-serif;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
 }
 
 .btn-dark {  
     border-radius: 100% !important;
 }
+
+
+
 
 @media screen and (max-width: 1400px) {
 
@@ -326,7 +332,6 @@ a.tag-badge > span.badge:hover {
         font-size: 2.5rem;        
     }
 }
-
 
 @media screen and (max-width: 770px) {
 
@@ -351,9 +356,6 @@ a.tag-badge > span.badge:hover {
         font-size: 1rem;        
     }
 }
-
-
-
 
 @media screen and (max-width: 416px) {
 

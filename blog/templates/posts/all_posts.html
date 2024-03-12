@@ -52,13 +52,7 @@
                 <p class="card-text mb-3">{{ post.excerpt }}</p>
                 <p class="card-text">
                   <a href="{% url 'post_detail' post.slug %}" class="btn btn-green btn-sm">Read More</a>
-                </p>             
-                {% if user.id == post.author.id %}
-                <small>
-                  <a href="{% url 'edit_post' post.slug %}" class="text-muted">Edit</a> |
-                  <a href="{% url 'delete_post' post.slug %}" class="text-danger">Delete</a>
-                </small>
-                {% endif %}           
+                </p>
               </div>
             </div>
           </div>

@@ -67,7 +67,7 @@
           <div>
             <small>
               <a href="{% url 'edit_product' product.id %}" class="text-muted">Edit</a> |
-              <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+              <a href="" class="text-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Delete</a>
             </small>
           </div>          
           {% endif %}
@@ -163,7 +163,7 @@
           <div>
             <small>
               <a href="{% url 'edit_product' product.id %}" class="text-muted">Edit</a> |
-              <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+              <a href="" class="text-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Delete</a>
             </small>
           </div>          
           {% endif %}
@@ -313,6 +313,26 @@
       </div>
   </div> 
 </div>
+
+<!-- Delete Product Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert alert-danger">Are you sure you want delete: <span>'{{ product.name }}'?</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+        <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}
 
