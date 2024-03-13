@@ -16,6 +16,7 @@ The webhook_handler is from
 the Project - Boutique Ado'
 """
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
@@ -82,7 +83,7 @@ class StripeWH_Handler:
                 profile.default_street_address1 = shipping_details.address.line1
                 profile.default_street_address2 = shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
-                profile.save()        
+                profile.save()
 
         order_exists = False
         attempt = 1
@@ -100,7 +101,7 @@ class StripeWH_Handler:
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_bag=bag,
-                    stripe_pid=pid,                   
+                    stripe_pid=pid,
                 )
                 order_exists = True
                 break
@@ -108,7 +109,7 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
-            self._send_confirmation_email(order)            
+            self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: '
                 'Verified order already in database',
@@ -117,7 +118,7 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    full_name=shipping_details.name,                    
+                    full_name=shipping_details.name,
                     user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,

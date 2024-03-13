@@ -9,9 +9,9 @@ class PostCategory(models.Model):
     This class creates post's categories.
     """
     name = models.CharField(max_length=200)
-    
+
     class Meta:
-        verbose_name_plural = 'Post Categories'   
+        verbose_name_plural = 'Post Categories'
         ordering = ['name']
 
     def __str__(self):
@@ -24,7 +24,7 @@ class Post(models.Model):
     featured_image = models.ImageField(null=True, blank=True)
     content = models.TextField()
     excerpt = models.TextField(blank=True)
-    tag = models.ForeignKey('PostCategory', null=True, blank=True, 
+    tag = models.ForeignKey('PostCategory', null=True, blank=True,
                             on_delete=models.SET_NULL)
     author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL,
                                related_name="blog_posts")

@@ -11,15 +11,14 @@ from .forms import ProductForm, ReviewForm
 
 def all_products(request):
     """
-    A view to show all products, 
-    including sorting and search queries 
+    A view to show all products,
+    including sorting and search queries
     """
     products = Product.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
-    
 
     if request.GET:
         if 'sort' in request.GET:
@@ -27,12 +26,12 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))            
+                products = products.annotate(lower_name=Lower('name'))
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)            
+            products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -42,12 +41,14 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -63,14 +64,14 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """
-    A view to show product detailed view.    
+    A view to show product detailed view.
     """
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.order_by('created_on')
     profile = get_object_or_404(UserProfile, user=request.user)
-    
-    if request.method == 'POST':        
-       
+
+    if request.method == 'POST':
+
         if not request.user:
             messages.error(request, 'Sorry, you must login to do that.')
             return redirect(reverse('products'))
@@ -85,7 +86,7 @@ def product_detail(request, product_id):
                     request,
                     'Successfully posted a review.'
                 )
-                return redirect(reverse('product_detail', args=[product.id]))       
+                return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ReviewForm(initial={'name': profile.user, })
 
@@ -102,12 +103,12 @@ def product_detail(request, product_id):
 @login_required
 def add_product(request):
     """ Add a product to the store """
-    products = Product.objects.all() 
+    products = Product.objects.all()
 
     if not request.user.is_superuser:
         messages.error(request, 'You do not have access to this page!')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -116,10 +117,10 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. '
-            'Please ensure the form is valid.')
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -162,7 +163,7 @@ def edit_product(request, product_id):
     context = {
         'form': form,
         'product': product,
-        'products': products,        
+        'products': products,
     }
 
     return render(request, template, context)
@@ -174,7 +175,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'You do not have access to this page!')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

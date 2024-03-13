@@ -14,7 +14,7 @@ class Category(models.Model):
         return self.name
 
     def get_view_name(self):
-        return self.view_name  
+        return self.view_name
 
 
 class Product(models.Model):
@@ -30,12 +30,12 @@ class Product(models.Model):
                                  on_delete=models.SET_NULL)
     name = models.CharField(max_length=200, null=True)
     description = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)    
-    price = models.DecimalField(max_digits=6, decimal_places=2)  
+    date = models.DateTimeField(auto_now_add=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, blank=True, null=True)
     sku = models.CharField(max_length=254, null=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)    
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     users_wishlist = models.ManyToManyField(User)
     on_sale = models.BooleanField(default=False)
@@ -55,7 +55,7 @@ class Review(models.Model):
 
     product = models.ForeignKey(
          Product, on_delete=models.CASCADE, related_name="reviews")
-    name = models.CharField(max_length=50)    
+    name = models.CharField(max_length=50)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 

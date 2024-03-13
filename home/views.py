@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def privacy_policy(request):
     """
     This view renders the privacy page

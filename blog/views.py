@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Post, PostCategory
 from .forms import PostForm
 
+
 def all_posts(request):
     """A view to show all posts in Blog"""
 
@@ -20,7 +21,7 @@ def all_posts(request):
 
     context = {
         'posts': posts,
-        'tag': tag,       
+        'tag': tag,
     }
 
     return render(request, 'posts/all_posts.html', context)
@@ -32,7 +33,7 @@ def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
     context = {
-        'post': post,        
+        'post': post,
     }
 
     return render(request, 'posts/post_detail.html', context)
@@ -57,7 +58,6 @@ def add_post(request):
                            'Please ensure the form is valid.')
     else:
         form = PostForm()
-    
     template = 'posts/add_post.html'
     context = {
         'form': form,
@@ -69,7 +69,7 @@ def add_post(request):
 def edit_post(request, slug):
     """Edit a posts in the blog"""
 
-    post = get_object_or_404 (Post, slug=slug)
+    post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         form = PostForm(
             request.POST, request.FILES, instance=post)
@@ -77,7 +77,8 @@ def edit_post(request, slug):
             form.instance.author = request.user
             form.instance.slug = slugify(form.instance.title)
             form.save()
-            messages.success(request, f'The Post - {post.title} is updated successfully!')
+            messages.success(
+                request, f'The Post - {post.title} is updated successfully!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
             messages.error(request, 'Failed to update blog post. '

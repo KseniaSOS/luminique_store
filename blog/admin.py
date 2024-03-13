@@ -5,12 +5,11 @@ from .models import Post, PostCategory
 @admin.register(PostCategory)
 class PostCategoryAdmin(admin.ModelAdmin):
     """
-    Adds fields to the admin area 
+    Adds fields to the admin area
     """
 
     list_display = ('name', )
     list_filter = ('name', )
-
 
 
 @admin.register(Post)
@@ -35,4 +34,3 @@ class PostAdmin(admin.ModelAdmin):
         """
 
         queryset.update(status=0)
-

@@ -4,7 +4,7 @@ from .models import Product, Category, Review
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    """  
+    """
     This class adds fields from the Recipe model to the admin
     panel
     """
@@ -13,8 +13,8 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
-        'date',      
-        'price',        
+        'date',
+        'price',
         'image',
     )
 
@@ -25,18 +25,18 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = (        
-        'name',        
+    list_display = (
+        'name',
     )
+
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    """  
+    """
     This class adds fields from the Review model to the admin
     panel
     """
 
     list_display = ('name', 'body', 'product', 'created_on',)
     list_filter = ('created_on',)
-    search_fields = ['name'] 
-    
+    search_fields = ['name']

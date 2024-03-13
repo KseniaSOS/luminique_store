@@ -2,12 +2,13 @@ from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, Review
 
+
 class ProductForm(forms.ModelForm):
     """Creates Product form"""
     class Meta:
         model = Product
 
-        fields = ('category','sku', 'name', 'price', 'description',
+        fields = ('category', 'sku', 'name', 'price', 'description',
                   'image', 'on_sale', 'sale_price',)
         widgets = {
                     'category': forms.Select(
@@ -16,14 +17,13 @@ class ProductForm(forms.ModelForm):
                         attrs={'min': '0', 'max': '5000'}),
                     'sale_price': forms.NumberInput(
                         attrs={'min': '0', 'max': '5000'}),
-                    }     
+                    }
 
     image = forms.ImageField(
         label='Image',
         required=False,
         widget=CustomClearableFileInput,
     )
-
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
