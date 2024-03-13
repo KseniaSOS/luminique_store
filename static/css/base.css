@@ -16,8 +16,7 @@ body {
     font-style: normal;
     text-transform: uppercase;
     font-size: 50px;
-    color: #5fa68a !important;
-    text-shadow: 2px 2px 0px #000 !important;
+    color: #000000 !important;    
 } 
 
 .contact-info {
@@ -292,13 +291,14 @@ a.tag-badge > span.badge:hover {
 }
 
 .newsletter-bg {
-    background-color: #d4e7dd;
+    background:#d4e7dd !important;    
 }
 
 #mc_embed_signup,
 .mc-field-group {
     background: #d4e7dd;
 }
+
 
 /* footer */
 .footer {
@@ -370,3 +370,4 @@ a.tag-badge > span.badge:hover {
         display: none;
     }
 }
+

@@ -77,19 +77,17 @@
   {% include 'includes/footer.html' %}
 
   {% block postloadjs %}
-  <script type="text/javascript">    
-    // $('.toast').toast('show');
-    let toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  <script type="text/javascript">     
+    let toastElList = [].slice.call(document.querySelectorAll('.toast'));
     let toastList = toastElList.map(function (toastEl) {
       let option = {
           animation: true,
           autohide: true,
           delay: 5000,
-      }
-      let bsToast = new bootstrap.Toast(toastEl, option)
+      };
+      let bsToast = new bootstrap.Toast(toastEl, option);
       bsToast.show();
-    })
-
+    });
   </script>
   {% endblock %}
 
