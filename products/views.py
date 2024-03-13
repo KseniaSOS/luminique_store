@@ -102,10 +102,12 @@ def product_detail(request, product_id):
 @login_required
 def add_product(request):
     """ Add a product to the store """
+    products = Product.objects.all() 
+
     if not request.user.is_superuser:
         messages.error(request, 'You do not have access to this page!')
         return redirect(reverse('home'))
-
+    
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -121,6 +123,8 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'products': products,
+        'product': products,
     }
 
     return render(request, template, context)
@@ -157,7 +161,8 @@ def edit_product(request, product_id):
     template = 'products/edit_product.html'
     context = {
         'form': form,
-        'product': product,        
+        'product': product,
+        'products': products,        
     }
 
     return render(request, template, context)

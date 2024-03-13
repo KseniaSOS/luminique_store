@@ -86,11 +86,11 @@
                         aria-label="Search">
                 </div>
             </form>
-            <ul class="navbar-nav d-flex flex-row me-1">
+            <ul class="navbar-nav d-flex flex-row me-1">                
                 <li class="nav-item icon dropdown">
                     <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownMyAccount" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>
-                        Account
+                        {% if user.is_authenticated %}{{ user }}{% else %}Account{% endif %}                        
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMyAccount">
                         {% if request.user.is_authenticated %}

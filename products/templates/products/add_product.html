@@ -15,13 +15,55 @@
         <div class="row">
             <div class="col text-center m-4">
                 <h1>Product Management</h1>
-                <h4>Add a Product</h4>                                  
             </div>
         </div>
-
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 col-lg-6">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+        <div class="row justify-content-center">            
+            <div class="col ml-lg-5 mx-3 order-last">
+                <h5 class="text-muted mb-5 text-center text-uppercase">Product List</h5>
+                <div class="product-list-wrapper mt-3">
+                    <table class="table table-bordered table-sm ">
+                        <thead class="table-success">
+                            <tr>
+                                <th scope="col">ID</th>                               
+                                <th scope="col">Image</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date</th>                                
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products %}
+                            <tr> 
+                                <td class="align-middle">{{ product.id }}</td>                               
+                                <td class="align-middle">
+                                    {% if product.image %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="img-fluid border-2 p-2" width="100px"
+                                            height="100px" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="img-fluid border-2 p-2" width="100px"
+                                            height="100px" src="
+                                    {{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                </td>                                
+                                <td class="align-middle">{{ product.name }}</td>
+                                <td class="align-middle">{{ product.date|date:"d.m.Y" }}</td>                                
+                                <td class="align-middle">                                    
+                                    <a href="{% url 'edit_product' product.id %}" class=" btn btn-warning text-uppercase">Edit</a>                                   
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mx-4">
+                <h5 class="text-muted text-center text-uppercase mb-4">Add a product</h5>
+                <form method="POST" class="form-text mb-2" action="{% url 'add_product' %}"
+                    enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -30,14 +72,14 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %} 
-                    <div class="text-center">
-                        <a class="btn btn-outline-dark text-uppercase" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-green text-uppercase" type="submit">Add Product</button>
+                    <div class="text-center mb-4">                                              
+                        <button class="btn btn-warning text-uppercase" type="submit">Add Product</button>
+                        <a class="btn btn-green text-uppercase" href="{% url 'products' %}">Cancel</a>
                     </div>
                 </form>
-            </div>            
+            </div>
         </div>
-    </div>
+    </div>   
 {% endblock %}
 
 {% block postloadjs %}

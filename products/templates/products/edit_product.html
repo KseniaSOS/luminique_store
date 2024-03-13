@@ -15,13 +15,59 @@
         <div class="row">
             <div class="col text-center m-4">
                 <h1>Product Management</h1>
-                <h4>Edit a Product</h4>                                 
             </div>
         </div>
-
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 col-lg-6">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+        <div class="row justify-content-center">            
+            <div class="col ml-lg-5 mx-3 order-last">
+                <h5 class="text-muted mb-5 text-center text-uppercase">Product List</h5>
+                <div class="product-list-wrapper mt-3">
+                    <table class="table table-bordered table-sm ">
+                        <thead class="table-success">
+                            <tr> 
+                                <th scope="col">ID</th>                               
+                                <th scope="col">Image</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date</th>                                
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in products %}
+                            <tr>                                
+                                <td class="align-middle">
+                                    {% if p.image %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="img-fluid border-2 p-2" width="100px"
+                                            height="100px" src="{{ p.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="img-fluid border-2 p-2" width="100px"
+                                            height="100px" src="
+                                    {{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                </td>
+                                <td class="align-middle">{{ p.id }}</td>
+                                <td class="align-middle">{{ p.name }}</td>
+                                <td class="align-middle">{{ p.date|date:"d.m.Y" }}</td>                                
+                                <td class="align-middle">
+                                    {% if p.id == product.id %}
+                                    ..in editing...
+                                    {% else %}
+                                    <a href="{% url 'edit_product' p.id %}" class=" btn btn-warning text-uppercase">Edit</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mx-4">
+                <h5 class="text-muted text-center text-uppercase mb-4">Edit a product</h5>
+                <form method="POST" class="form-text mb-2" action="{% url 'edit_product' product.id %}"
+                    enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -29,15 +75,39 @@
                         {% else %}
                             {{ field }}
                         {% endif %}
-                    {% endfor %}                
-                    <div class="text-center">                        
-                        <a class="btn btn-outline-dark text-uppercase" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-green text-uppercase" type="submit">Update Product</button>
+                    {% endfor %}
+                    <div class="text-center mb-4">
+                        <a href="" class="btn btn-danger text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            data-bs-whatever="@mdo">Delete</a>                        
+                        <button class="btn btn-warning text-uppercase" type="submit">Update</button>
+                        <a class="btn btn-green text-uppercase" href="{% url 'add_product' %}">Cancel</a>
                     </div>
                 </form>
-            </div>            
+            </div>
         </div>
     </div>
+
+    <!-- Delete Product Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete Product</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="alert alert-danger">Are you sure you want delete: <span>'{{ product.name }}'?</span></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+              <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 {% endblock %}
  
 
