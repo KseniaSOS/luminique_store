@@ -411,7 +411,18 @@
                                 target="_blank">https://luminique-3d156ce4ed79.herokuapp.com/</a></p>
                     </li>
                 </ul>
-            </div>
+            </div>            
         </div>
+        <div onclick="scrollToTop()" class="scrollTop rounded-1">Top</div>
     </div>    
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+  <script type="text/javascript">
+    function scrollToTop(){
+      window.scrollTo(0, 0);
+    }
+  </script>
 {% endblock %}

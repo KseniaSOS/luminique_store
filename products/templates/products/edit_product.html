@@ -37,12 +37,12 @@
                                 <td class="align-middle">
                                     {% if p.image %}
                                     <a href="{% url 'product_detail' product.id %}">
-                                        <img class="img-fluid border-2 p-2" width="100px"
+                                        <img class="img-fluid border-2" width="100px"
                                             height="100px" src="{{ p.image.url }}" alt="{{ product.name }}">
                                     </a>
                                     {% else %}
                                     <a href="{% url 'product_detail' product.id %}">
-                                        <img class="img-fluid border-2 p-2" width="100px"
+                                        <img class="img-fluid border-2" width="100px"
                                             height="100px" src="
                                     {{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     </a>
