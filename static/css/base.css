@@ -24,7 +24,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.nav-links {
+.menu-links {
     font-size: 19px;
     font-weight: 500;
     color: #000000 !important;
@@ -36,7 +36,7 @@ body {
     text-transform: uppercase;
 }
 
-.nav-links:hover {
+.menu-links:hover {
     color: #5fa68a  !important;
 }
 

@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto">                
                 <li class="nav-item nav-items dropdown">
-                    <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
+                    <a class="nav-link menu-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Products
                     </a>
@@ -45,31 +45,31 @@
                         <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
                     </ul>
                 </li>
-                <li class="nav-item nav-items dropdown">
-                    <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
+                <li class="nav-item menu-items dropdown">
+                    <a class="nav-link menu-links dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categories
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=earrings">Earrings</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=bracelets">Bracelets</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=necklaces">Necklaces</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=earrings,bracelets,necklaces">All Categories</a></li>
                     </ul>
                 </li>
-                <li class="nav-item nav-items dropdown">
-                    <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownProducts" role="button"
+                <li class="nav-item menu-items dropdown">
+                    <a class="nav-link menu-links dropdown-toggle" href="#" id="navbarDropdownSpecialOffers" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Special Offers
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownSpecialOffers">
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=deals">Deals</a></li>
                         <li><a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals,deals,all_specials">All Specials</a></li>
                     </ul>
                 </li>
                 <li class="nav-item nav-items dropdown">
-                    <a class="nav-link nav-links dropdown-toggle" href="" id="navbarDropdownProducts" role="button"
+                    <a class="nav-link menu-links dropdown-toggle" href="" id="navbarDropdownBlog" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Blog
                     </a>
@@ -83,7 +83,7 @@
             </ul>
             <form method="GET" action="{% url 'products' %}" class="w-auto mx-4 search-mob-nav">
                 <div class="input-group">
-                    <button class="btn btn-link nav-links search-input" aria-label="Search this site" type="submit"><i
+                    <button class="btn btn-link menu-links search-input" aria-label="Search this site" type="submit"><i
                             class="fa fa-search fa-fw" aria-hidden="true"></i></button>
                     <input class="form-control me-2" type="search" name="q" placeholder="Search Product ..."
                         aria-label="Search">
@@ -91,7 +91,7 @@
             </form>
             <ul class="navbar-nav d-flex flex-row me-1">                
                 <li class="nav-item icon dropdown">
-                    <a class="nav-link nav-links dropdown-toggle" href="#" id="navbarDropdownMyAccount" role="button"
+                    <a class="nav-link menu-links dropdown-toggle" href="#" id="navbarDropdownMyAccount" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>
                         {% if user.is_authenticated %}{{ user }}{% else %}Account{% endif %}                        
                     </a>
@@ -129,7 +129,7 @@
                     </ul>
                 </li>
                 <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link nav-links ml-2 icon" href="{% url 'view_bag' %}"><i class="fa-solid fa-basket-shopping"></i>
+                    <a class="nav-link menu-links ml-2 icon" href="{% url 'view_bag' %}"><i class="fa-solid fa-basket-shopping"></i>
                         {% if grand_total %}
                         <strong>€{{ grand_total|floatformat:2 }}</strong>
                         {% else %}
