@@ -1,11 +1,17 @@
 # **Luminique**
 
+![Sweet Code Blog responsive design](readme/assets/images/responsive.png)
+
+**Developer: Ksenia Sossin**
+* [View Sweet Code Blog Repository](https://github.com/KseniaSOS/luminique_store)
+* [View live website](https://luminique-3d156ce4ed79.herokuapp.com/)
+
 
 Project was created for Portfolio Project #5 (E-Commerce Applications Portfolio Project) - Diploma in Full Stack Software Development Diploma at the [Code Institute](https://www.codeinstitute.net).
 
 [View live website here]()
 
-![Luminique](readme/assets/images/responsive.png)
+
 
 # Table of Content
 
@@ -129,11 +135,11 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 ## Code Validation
 ### Markup Validation
 
-<!-- The website Luminique was valdated by [W3C html Validator](https://validator.w3.org/). All pages were without errors. -->
+The website Luminique was validated by [W3C html Validator](https://validator.w3.org/). There were some errors, which i described in bud section. But in general all pages were without errors, just with warnings about js.
 
 <details><summary><b>HTML Validation Result</b></summary>
 
-![HTML Result Home Page](readme/assets/images/)
+![HTML Result Home Page](readme/assets/images/html-validator.png)
 </details><br/>
 
 ### CSS Validaton
@@ -155,7 +161,6 @@ The CSS have been run through the [W3C CSS Validator](https://jigsaw.w3.org/css-
 * inline jscript in products.html in products app - No errors reported
 * inline jscript in base.html in root templates - No errors reported
 * inline jscript in footer.html in root templates - No errors reported
-* inline jscript in index.html in home app - No errors reported
 * inline jscript in all_posts.html in blog app - No errors reported
 * inline jscript in policy_privacy.html in home app - No errors reported
 
@@ -256,18 +261,25 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
 ### WAVE
 
 [WAVE](https://wave.webaim.org/) was used to check accessibility.
-Very low contrast between the color of the star sign and the background color, which I decided not to change due to its irrelevance.
+
 
 <details><summary><b>WAVE Result</b></summary>
 
 ![WAVE Result](readme/assets/images/wave.png)
-![WAVE Result](readme/assets/images/wave-error.png)
 </details><br/>
 
 
 ## Known bugs
 ### Fixed Bugs
 
-* 
+* Dulicate ID on all_products page. 
+  * Changed id to class and remaned.
+
+    <details><summary><b>Html Validator</b></summary>
+
+    ![Excerpt bug](readme/assets/images/html-validator-bug.png)
+    ![Excerpt bug](readme/assets/images/html-validator-bug2.png)
+    </details><br/>
+  
 
 ### Unfixed Bugs

@@ -157,7 +157,7 @@ h1 {
     right: 3rem;
 }
 
-#deal{
+.deal{
     text-decoration: line-through; 
     color: red;
 }
