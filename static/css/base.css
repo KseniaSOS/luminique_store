@@ -148,16 +148,16 @@ h1 {
     scroll-behavior: smooth;    
 }
 
-#sale-badge {
+#deal-badge {
     top: 3rem;
     right: 3rem;
 }
-#sale-badge-detail {
+#deal-badge-detail {
     top: 3rem;
     right: 3rem;
 }
 
-#sale{
+#deal{
     text-decoration: line-through; 
     color: red;
 }

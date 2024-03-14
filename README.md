@@ -241,28 +241,26 @@ CI Python Linter [Code Institute Linter](https://pep8ci.herokuapp.com/) was used
 
 ### Lighthouse
 
-Google Lighthouse was used to test website performance.
+Google Lighthouse in Chrome Developer Tools was used to test the site within the areas of Performance, Accessibility, Best Practices and SEO. I tested the home page, view all blog posts page, view all products page, product management page and blog management page. 
 
 <details><summary><b>Lighthouse</b></summary>
 
-![Lighthouse](readme/assets/images/)
-
-![Lighthouse](readme/assets/images/)
-![Lighthouse](readme/assets/images/)
+![Lighthouse](readme/assets/images/lighthouse-home.png)
+![Lighthouse](readme/assets/images/lighthouse-products.png)
+![Lighthouse](readme/assets/images/lighthouse-posts.png)
+![Lighthouse](readme/assets/images/lighthouse-management.png)
 </details><br />
 
-<details><summary><b>Lighthouse Mobile</b></summary>
-
-![Lighthouse-mobile](readme/assets/images/)
-</details><br />
 
 ### WAVE
 
-[WAVE](https://wave.webaim.org/) was used to check accessibility. 
+[WAVE](https://wave.webaim.org/) was used to check accessibility.
+Very low contrast between the color of the star sign and the background color, which I decided not to change due to its irrelevance.
 
 <details><summary><b>WAVE Result</b></summary>
 
 ![WAVE Result](readme/assets/images/wave.png)
+![WAVE Result](readme/assets/images/wave-error.png)
 </details><br/>
 
 
