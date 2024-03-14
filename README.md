@@ -142,7 +142,8 @@ The CSS have been run through the [W3C CSS Validator](https://jigsaw.w3.org/css-
 
 <details><summary><b>CSS Validation Result</b></summary>
 
-![CSS Result](readme/assets/images/css_validation.png)
+![CSS Result](readme/assets/images/base-css.png)
+![CSS Result](readme/assets/images/checkout-css.png)
 </details><br/>
 
 ### JavaScript Validation

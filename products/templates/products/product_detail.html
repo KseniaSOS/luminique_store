@@ -254,40 +254,43 @@
           </div>
         </div>
       </div>
-    </div>
-
-      <!-- Review Section -->    
-      <div class="row col-6 col-md-6 mb-2">
-        <h3>Reviews:</h3>
-        {% for review in reviews %}
-        <div class="reviews border rounded-1 ms-2">
-          <p>
-            <strong>{{ review.name }}</strong>
-            <span class="text-muted">
-              <small>{{ review.created_on }}</small>
-            </span>
-          </p>
-          {{ review.body | linebreaks }}
-        </div>
-        <br>
-        {% endfor %}
-      </div>
-      {% if user.is_authenticated %}
-    <div class="row col-6 col-md-6 mb-2">
-      <div class="review-body">
-        <h4>Leave a review:</h4>
-        <p>Posting as: {{ user.username }}</p>
-        <form method="post">
-          {{ review_form | crispy }}
-          {% csrf_token %}
-          <button type="submit" class="btn btn-green btn-sm">Submit</button>
-        </form>
-      </div>
-    </div>
-    {% endif %}
-    </div>
+    </div>  
   </div>
 </section>
+
+<!-- Review Section --> 
+<div class="container mb-5 ps-5">     
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 mb-4">
+      <h3>Reviews:</h3>
+      {% for review in reviews %}
+      <div class="reviews border rounded-1 p-2">
+        <p>
+          <strong>{{ review.name }}</strong>
+          <span class="text-muted">
+            <small>{{ review.created_on }}</small>
+          </span>
+        </p>
+        {{ review.body | linebreaks }}
+      </div>
+      <br>
+      {% endfor %}
+    </div>    
+  </div>
+  {% if user.is_authenticated %}
+  <div class="col-xl-6 col-lg-6">
+    <div class="review-body">
+      <h4>Leave a review:</h4>
+      <p>Posting as: {{ user.username }}</p>
+      <form method="post">
+        {{ review_form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-green btn-sm">Submit</button>
+      </form>
+    </div>
+  </div>
+  {% endif %}
+</div>
 
 
 <!-- Image Modal -->

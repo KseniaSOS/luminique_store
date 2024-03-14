@@ -168,8 +168,7 @@ h1 {
     right: 30px;
     padding: 10px 15px;
     background-color: #5fa68a;
-    color: #000000;
-    border-radius: 1px solid #000000;
+    color: #000000;    
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
@@ -318,9 +317,6 @@ a.tag-badge > span.badge:hover {
     font-size: 22px;
     transform: rotate(-6deg);
 }
-
-
-
 
 @media screen and (max-width: 1400px) {
 
