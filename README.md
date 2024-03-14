@@ -237,6 +237,14 @@ CI Python Linter [Code Institute Linter](https://pep8ci.herokuapp.com/) was used
 | Images | pass    | pass      | pass       | pass      | pass     | pass            | pass            |
 | Links  | pass    | pass      | pass       | pass      | pass     | pass            | pass            |
 
+
+Hover effect on blog categories is bigger than images. This can be seen just on big screens more then 1600x900.
+<details><summary><b>Responsive Design Checker</b></summary>
+
+![Responsive Design Checker](readme/assets/images/Responsive-Design-Checker.png)
+</details><br />
+
+
 ### Browser Compatibility
 
 * Google Chrome Version 
@@ -260,7 +268,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
 
 ### WAVE
 
-[WAVE](https://wave.webaim.org/) was used to check accessibility.
+[WAVE](https://wave.webaim.org/) was used to check accessibility. There was an error in footer sections, which is described in bugs section.
 
 
 <details><summary><b>WAVE Result</b></summary>
@@ -283,3 +291,13 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
   
 
 ### Unfixed Bugs
+
+* Missing form label. 
+  * This was a code from Mailchimp, so I didn't changed it to escape problems in the future.
+
+    <details><summary><b>Wave Bug</b></summary>
+
+    
+    ![Excerpt bug](readme/assets/images/vawe-bug.png)
+    </details><br/>
+  
