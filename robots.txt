@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /checkout/
+Disallow: /bag/
+Disallow: /profile/
+Sitemap: https://luminique-3d156ce4ed79.herokuapp.com/sitemap.xml

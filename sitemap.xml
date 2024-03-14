@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=earrings</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=bracelets</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=necklaces</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=earrings,bracelets,necklaces</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=new_arrivals</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=deals</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/products/?category=new_arrivals,deals,all_specials</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tag=trends</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tag=tips</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tag=inspiration</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tag=trends,tips,inspiration</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/bag/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/privacy_policy/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/faq/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/pearl-perfection-trending-styles/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tags=trends</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/elevate-your-style-mixing-chain-sizes/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/modern-wedding-necklaces-trends-for-todays-bride/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/sparkle-and-shine-the-latest-in-jewelry-trends/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/popular-gemstone-settings-explained/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tags=tips</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/perfect-wedding-jewelry-5/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/sparkling-jewelry-care-guide/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/mix-match-jewelry-for-every-occasion/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/?tags=inspiration</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/pearl-perfection-trending-styles/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/blog/fdgfd/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/elevate-your-style-mixing-chain-sizes/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/modern-wedding-necklaces-trends-for-todays-bride/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/sparkle-and-shine-the-latest-in-jewelry-trends/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/popular-gemstone-settings-explained/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/perfect-wedding-jewelry-5/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/sparkling-jewelry-care-guide/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/mix-match-jewelry-for-every-occasion/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fpearl-perfection-trending-styles%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=/blog/delete/fdgfd/</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Felevate-your-style-mixing-chain-sizes%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fmodern-wedding-necklaces-trends-for-todays-bride%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fsparkle-and-shine-the-latest-in-jewelry-trends%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fpopular-gemstone-settings-explained%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fperfect-wedding-jewelry-5%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fsparkling-jewelry-care-guide%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Fmix-match-jewelry-for-every-occasion%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fpearl-perfection-trending-styles%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/signup/?next=%2Fblog%2Fdelete%2Ffdgfd%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Felevate-your-style-mixing-chain-sizes%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fmodern-wedding-necklaces-trends-for-todays-bride%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fsparkle-and-shine-the-latest-in-jewelry-trends%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fpopular-gemstone-settings-explained%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fperfect-wedding-jewelry-5%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fsparkling-jewelry-care-guide%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Fmix-match-jewelry-for-every-occasion%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://luminique-3d156ce4ed79.herokuapp.com/accounts/login/?next=%2Fblog%2Fdelete%2Ffdgfd%2F</loc>
+  <lastmod>2024-03-14T17:34:39+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+
+
+</urlset>
