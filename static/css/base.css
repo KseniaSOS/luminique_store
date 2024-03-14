@@ -280,39 +280,44 @@ a.tag-badge > span.badge:hover {
 }
 
 
-/* Mailchimp */
-
-#mc_embed_signup {
-    background:#d4e7dd !important;    
-    font-family: "Oswald", sans-serif;
-    color:  #000000;
-    letter-spacing: 0.5px;
-    width: 600px;
-}
-
-.newsletter-bg {
-    background:#d4e7dd !important;    
-}
-
-#mc_embed_signup,
-.mc-field-group {
-    background: #d4e7dd;
-}
-
-
 /* footer */
-.footer {
-    text-align: center;
-    font-size: 0.9rem;
-    font-family: "Protest Strike", sans-serif;
-    position: sticky;
-    top: 100%;
-}
 
 .btn-dark {  
     border-radius: 100% !important;
+} 
+
+.footer-section {
+    background: #d4e7dd;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
+.subscribe-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #ffffff;    
+    color:  #000000;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background:  #000000;
+    padding: 13px 20px;    
+    top: 0;
+}
+
+.subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+}
 
 
 

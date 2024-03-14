@@ -153,6 +153,7 @@ The CSS have been run through the [W3C CSS Validator](https://jigsaw.w3.org/css-
 * inline jscript in bag.html in bag app - No errors reported
 * inline jscript in products.html in products app - No errors reported
 * inline jscript in base.html in root templates - No errors reported
+* inline jscript in footer.html in root templates - No errors reported
 * inline jscript in index.html in home app - No errors reported
 * inline jscript in all_posts.html in blog app - No errors reported
 * inline jscript in policy_privacy.html in home app - No errors reported
