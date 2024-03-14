@@ -7,11 +7,6 @@
 * [View live website](https://luminique-3d156ce4ed79.herokuapp.com/)
 
 
-Project was created for Portfolio Project #5 (E-Commerce Applications Portfolio Project) - Diploma in Full Stack Software Development Diploma at the [Code Institute](https://www.codeinstitute.net).
-
-[View live website here]()
-
-
 
 # Table of Content
 
@@ -24,28 +19,28 @@ Project was created for Portfolio Project #5 (E-Commerce Applications Portfolio 
       * [Marketing Strategy](<#marketing-strategy>)        
     * [Project Management](<#project-management>)
 
-
 * [**User Experience (UX)**](<#user-experience-ux>)
     * [Wireframes](<#wireframes>)
     * [User Stories](<#user-stories>)
     * [Site Structure](<#site-structure>)
     * [Design Choices](<#design-choices>)
 
-* [**Existing Features**](<#existing-features>)
-    * [Top Bar](<#top-bar>)
+* [**Existing Features**](<#existing-features>)    
     * [Navigation](<#navigation>)
     * [Home](<#home>)
     * [Products](<#hero-image>)
     * [Product Detail View](<#product-detail-view>)
     * [Review](<#review>)
     * [Blog](<#blog>)
-    * [Admin Area](<#admin-area>) 
-    * [Product Menagemant](<#product-menagement>)        
-    * [Blog Menagement](<#blog-menagement>)    
+    * [Post Detail View](<#post-detail-view>)
+    * [Wishlist](<#Wishlist>)    
     * [Shopping Bag](<#shopping-bag>)
     * [Secure Checkout](<#secure-checkout>)
     * [Order Confirmation](<#order-confirmation>)
-    * [Confirmation Emails](<#confirmation-emails>)    
+    * [Confirmation Emails](<#confirmation-emails>)
+    * [Admin Area](<#admin-area>) 
+    * [Product Menagemant](<#product-menagement>)        
+    * [Blog Menagement](<#blog-menagement>)
     * [Sign Up](<#sign-up>)
     * [Sign In](<#sign-in>)
     * [Sign Out](<#sign-out>)
@@ -68,6 +63,157 @@ Project was created for Portfolio Project #5 (E-Commerce Applications Portfolio 
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
 * [Acknowledgements](<#acknowledgements>)
+
+# **Project**
+
+## Introduction
+
+Introducing Luminique, your ultimate online destination for exquisite and stylish jewelry that caters to the fashion-forward woman. Jewelry crafted from the finest materials, including gold, silver, and sparkling zirconium stones. Designed to appeal to a broad age range from 16 to 60 years, Luminique ensures that every piece resonates with the personal style  of  customers. All products have information and responsive customer support. The site also offers a blog that is handled by Luminique Team with information about their latest releases and other relevant content for the site visitor. Luminique is committed to providing a seamless and secure online shopping experience. 
+
+Project was created for Portfolio Project #5 (E-Commerce Applications Portfolio Project) - Diploma in Full Stack Software Development Diploma at the [Code Institute](https://www.codeinstitute.net).
+
+* [View live website here](https://luminique-3d156ce4ed79.herokuapp.com/)
+ 
+
+
+## Site Users Goal
+
+Buyers love modern and stylish jewelry that easily suits their tastes and fashion preferences. The goal is to ensure that the site is easy to use. A visually appealing website that will allow customers to browse, search and purchase jewelry easily. Buyers expect quality jewelry made from real gold, silver and semi-precious stones. They want to make sure they are getting good value for money. Therefore, detailed product descriptions are desired, including materials used, sizes, care instructions, and reviews to help customers make an informed purchasing decision. Customers expect responsive support to answer questions, resolve problems, and promptly help resolve any issues. The buyer is provided with secure online transactions and protection of confidential financial information of clients.
+
+## Business Goal
+
+The main business goal of online jewelry store is to increase sales of contemporary jewelry. The site owner can provide an intuitive and secure site, ensuring a smooth shopping experience and effective product presentation.
+To increase new customers and retain existing customers, various marketing strategies are implemented to encourage repeat purchases and increase customer loyalty through loyalty programs.
+
+To check whether these goals are being achieved, site owner can use various measurement and analysis tools, such as:
+- Sales revenue and conversion rate
+- Website traffic and user engagement analytics (Google Business, Google Ads, Google Analytics)
+- Customer satisfaction surveys and feedback
+- Monitoring product returns and customer complaints
+- Regular technical testing of the site to eliminate potential problems
+- Constant monitoring of SEO metrics
+
+Regular review and analysis of these indicators will help evaluate the effectiveness of all strategies and make the necessary adjustments to achieve the goals of the business and customers of the online jewelry store.
+
+[Back to top](<#table-of-content>)
+
+## Marketing
+### Business Model
+
+The business model is focused on selling jewelry to individuals and involves a single payment, making our business model a B2C (Business to Consumer) model. This approach allows us to engage directly with our customers and provide them with a seamless shopping experience. The website is highly adjustable to adapt to customer needs, and effective marketing techniques are essential to reaching and engaging our audience.
+
+
+### Marketing Strategy
+
+#### Optimize For Mobile Devices.
+
+In a mobile-centric world, our website is fully responsive to ensure an excellent user experience on both mobile and desktop devices. We prioritize mobile accessibility to reach a wider audience.
+
+
+#### Website Layout.
+
+Our website boasts an intuitive and easy-to-navigate design, making it effortless for customers to find relevant information and make purchases without any hassle. User experience is at the core of our design principles.
+
+#### Marketing Techniques
+
+When it comes to marketing jewelry business, it's essential to choose the right marketing types that align with our target market and goals.
+
+There are 4 key marketing types that can benefit your jewelry business:
+* Content Marketing
+* Social Media Marketing
+* SEO (Search Engine Optimization)
+* Email Marketing
+
+
+**Content Marketing**
+
+Content marketing involves creating valuable and engaging content to attract and convert target customers, building trust and loyalty. It requires consistency and organization but can effectively demonstrate expertise and attract relevant clients. 
+Luminique maintains a blog on the website, where there is  original, informative, and relevant content for customers. The aim is to make customers want to visit the web site because they genuinely find it valuable.
+
+**Social Media Marketing** 
+
+Luminique Shop maintains an active presence on social media platforms, including Facebook and Instagram. These platforms help us engage with both existing and potential customers. We use them to create engagement, interact broadly, and maintain brand recognition. Our social media channels also serve as a means to drive traffic to our website, especially when we publish new blogs or feature the product of the month. Currently, our focus is on organic growth, but we may explore paid ads targeting specific customer groups in the future.
+
+- Instagram/Facebook: Using visually appealing images and videos (shorts/reels) to showcase their beauty and elegance. The visual nature of Instagram is perfect for showcasing jewelry. To increase visibility, it is also worth using hashtags.
+
+- Pinterest is a popular platform for discovering new trends and products, making it an ideal platform for our target audience. We need to create boards that feature jewelry collections, styling tips, and fashion ideas.
+
+- Influencer Partnerships: Collaboration with influencers or micro-influencers who resonate with our target audience. They can create authentic content featuring Luminique jewelry, reaching their followers and potentially driving traffic and sales to our online store.
+
+**Email Marketing**
+
+Email marketing is highlighted as beneficial for almost all e-commerce businesses, offering advantages such as scalability, permission-based contact lists. Luminique offers site users the option to sign up for our newsletter, powered by Mailchimp. This newsletter keeps customers informed about the latest developments at Luminique Online Shop, including new blog posts, the product of the month, events, collaborations, and discount codes.
+
+**Search Engine Optimization (SEO)**
+
+SEO is critical to improving search engine rankings and user experience. Luminique is focusing on leveraging semantic HTML elements, keywords, and metadata to improve visibility on search engines. Using Wordtracker, a search was made for keywords that match the users' search criteria. 
+
+*Meta Description*: LUMINIQUE is an online jewelry shop. Modern Jewelry crafted from silver and gold, adorned with cubic zirconia. Enjoy the convenience of global delivery on our handcrafted silver and gold pieces.
+
+*Meta Keywords*: luminique, jewelry, bracelets, earrings, necklaces, gold-plated, silver, cubic zirconia, gifts, e-shop, online-shop, jewelry store, jewelry blog, email-newsletter, global delivery.
+
+The website incorporates essential components like a sitemap.xml and robots.txt to facilitate search engine indexing and crawling. These files ensure that search engines can easily locate and access the site's pages, enhancing its visibility and search engine optimization (SEO) performance.
+
+<details><summary><b>Facebook Page</b></summary>
+
+![Facebook](readme/assets/images/fb-page1.png)
+
+![Facebook](readme/assets/images/fb-page2.png)
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+
+## Project Management
+### Github Board
+
+I've been using the [project board](https://github.com/users/KseniaSOS/projects/7/views/1) in GitHub to keep my project together. It has been working really well and has helped me structure up my work a lot. GitHub was used to plan and organize my hole project and user stories.
+
+<details><summary><b>Github Board</b></summary>
+
+![Project Board](readme/assets/images/project-board.png)
+
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+### Database Schema
+
+I used the SmartDraw modelling tool to create the database schema. it shows the relationships between the different models in the database connected to the application.
+
+Models used (besides standard user model) in this project are:
+
+**App: Blog**
+* **PostCategory** - Designed to manage blog categories.
+* **Post** - Manages blog posts, linking them to their categories through a ForeignKey to the `PostCategory` model for proper categorization.
+
+**App: Checkout**
+* **Order** -  Responsible for managing customer orders, including storing delivery information, generating order numbers, and updating totals. It's linked to the user_profile model through a foreign key.
+* **OrderLineItem** - Keeps track of each order item in each order the customer with ForeignKeys to the Order and Product model.
+
+**App: Products**
+* **Category** - Handles product categories.
+* **Product** - This model is tasked with managing the details of products, such as price, name, and category. It includes a ManyToMany connection to the User model to facilitate tracking of products in users' wishlists.
+* **Review** - This model manages product reviews, allowing users to leave feedback on products they have purchased or used.
+
+**App: Profiles**
+* **UserProfile** - This model maintains user-related information, including delivery details and order history. It features a method to either create a new user profile or update an existing one, ensuring that user information is current and accurate.
+
+
+<details><summary><b>Database Schema</b></summary>
+
+![Database Schema](readme/assets/images/)
+
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+
+
+
+
+
+
 
 
 # Technologies Used
@@ -263,7 +409,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
 ![Lighthouse](readme/assets/images/lighthouse-products.png)
 ![Lighthouse](readme/assets/images/lighthouse-posts.png)
 ![Lighthouse](readme/assets/images/lighthouse-management.png)
-</details><br />
+</details><br/>
 
 
 ### WAVE
@@ -285,8 +431,8 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
 
     <details><summary><b>Html Validator</b></summary>
 
-    ![Excerpt bug](readme/assets/images/html-validator-bug.png)
-    ![Excerpt bug](readme/assets/images/html-validator-bug2.png)
+    ![Html Validator](readme/assets/images/html-validator-bug.png)
+    ![Html Validator](readme/assets/images/html-validator-bug2.png)
     </details><br/>
   
 
@@ -298,6 +444,6 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
     <details><summary><b>Wave Bug</b></summary>
 
     
-    ![Excerpt bug](readme/assets/images/vawe-bug.png)
+    ![Wave Bug](readme/assets/images/vawe-bug.png)
     </details><br/>
   
