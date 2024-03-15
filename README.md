@@ -587,8 +587,8 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 | User Story | Testing Results |
 |------------|-----------------|
 | As a Shopper I can easily select the quantity of a product when purchasing it so that I can ensure I get the correct product and quantity | Product quantity selection is intuitive and accessible on the product detail page. |
-| As a Shopper I can easily view items in my bag to be purchased so that I can see the total cost and all the items I will get | The shopping bag page provides a detailed list of selected items and total cost. |
-| As a Shopper I can adjust the amount of products in my bag so that I can easily make changes to my purchase before checkout | Users can modify product quantities or remove items from the bag on the shopping bag page. |
+| As a Shopper I can easily view items in my bag to be purchased so that I can see the total cost and all the items I will get | The shopping bag section offers a comprehensive overview of chosen items and their cumulative price, accessible at the top of the navigation menu. |
+| As a Shopper I can adjust the amount of products in my bag so that I can easily make changes to my purchase before checkout | Users can modify product quantities or remove items from the bag on the shopping bag page |
 | As a Shopper I can provide my payment information in a simple way so that I can make the checkout process quick and easy | The checkout process is streamlined, with clear fields for payment information. |
 | As a Shopper I can feel myself safe and secure while giving my personal and payment data so that I can confidently provide the needed information to make a purchase | Payment process is secured with encryption, ensuring data safety. |
 | As a Shopper I can view an order confirmation after checkout so that I ensure that the order was placed correctly and I have not made any mistakes | Order confirmation is displayed on-screen post-purchase and sent via email. |
