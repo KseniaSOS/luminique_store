@@ -287,8 +287,8 @@ a.tag-badge > span.badge:hover {
 
 .footer-section {
     background: #d4e7dd;
-    position: relative;
-    bottom: 0;
+    /* position: relative; */
+    /* bottom: 0; */
     width: 100%;
     position: sticky;
     top: 100%;

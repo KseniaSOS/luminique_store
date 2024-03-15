@@ -229,6 +229,7 @@ The wireframes were produced in Balsamiq. There are frames for a full width disp
 |-----------|--------|------|:---------:|
 | Shopper | View a list of products | To select some to purchase | ☑ |
 | Shopper | Click on a specific product | To view its details like price, description, product rating, and product image | ☑ |
+| Shopper | read product reviews | to base my purchasing decisions on them | ☑ |
 | Shopper | leave a review about a product | It can be seen by other site visitors as well as the owner of the online store. | ☑ |
 | Shopper | View the total of my purchases at any time | To avoid spending too much | ☑ |
 | Shopper | Contact Shop in an easy way | To interact with them if needed | ☑ |
@@ -343,46 +344,47 @@ The navigation bar is straightforward, featuring a logo and dropdown links to va
 
 <details><summary><b>Navigation Large - User Not Logged In</b></summary>
 
-![Navigation Large - User Not Logged In](readme/assets/images/)
+![Navigation Large - User Not Logged In](readme/assets/images/nav_logged_out_users.png)
 </details><br/>
 
 <details><summary><b>Navigation Small - User Not Logged In</b></summary>
 
-![Navigation Small - User Not Logged In](readme/assets/images/)
+![Navigation Small - User Not Logged In](readme/assets/images/mob_nav_logged_out_users.png)
 </details><br/>
 
 *Visible links to logged in users:*
 
 All of the links that are visible to not authenticated users plus an extra dropdown menu with more links.
 
-* Create New Recipe - allows the user to create a new recipe
-* View My Recipes - lists all recipes created by the logged in user.
-* Log Out - Logs out the user.
+* My Profile - redirects to a page where users can modify their delivery details and view past orders (including confirmation receipts from previous purchases).
+* My Wishlist - a personalized wishlist for users who are logged in.
+* Log Out - signs the user out of their account.
 
 <details><summary><b>Navigation Large - User Logged In</b></summary>
 
-![Navigation Large - User Logged In](readme/assets/images/)
+![Navigation Large - User Logged In](readme/assets/images/logged_in_users.png)
 </details><br/>
 
 <details><summary><b>Navigation Small - User Logged In</b></summary>
 
-![Navigation Small - User Logged In](readme/assets/images/)
+![Navigation Small - User Logged In](readme/assets/images/mob_logged_in_users.png)
 </details><br/>
 
 *Visible links if user is administrator:*
 
-All of the links above plus the one below.
+All of the links and two above.
 
-* Add new Category - allows to admin to create a new category for the site
+* Product Management - redirects to a page where admin can manage products
+* Blog Management - redirects to a page where admin can manage blog
 
 <details><summary><b>Navigation Large - Admin Logged In</b></summary>
 
-![Navigation Large - Admin Logged In](readme/assets/images/)
+![Navigation Large - Admin Logged In](readme/assets/images/nav_admin.png)
 </details><br/>
 
 <details><summary><b>Navigation Small - Admin Logged In</b></summary>
 
-![Navigation Small - Admin Logged In](readme/assets/images/)
+![Navigation Small - Admin Logged In](readme/assets/images/mob_nav_admin.png)
 </details><br/>
 
 ### **Home**
@@ -397,14 +399,98 @@ All of the links above plus the one below.
 ### **Shopping Bag** 
 ### **Secure Checkout** 
 ### **Order Confirmation** 
-### **Confirmation Emails** 
+### **Confirmation Emails**
+
+Upon order confirmation, the user receives a confirmation email at their registered email address.
+
+<details><summary><b>Confirmation Email</b></summary>
+
+![Confirmation Email](readme/assets/images/email-confirmation.png)
+</details><br/>
+
+
 ### **Product Menagemant**
 ### **Blog Menagement**
 ### **Sign Up**
+
+If the site visitor has no registered user at Luminique Store, they have an opportunity to sign up. 
+
+<details><summary><b>Sign Up</b></summary>
+
+![Sign Up](readme/assets/images/mob_sign_up.png)
+</details><br/>
+
+
 ### **Sign In**
+
+On this page all registered users can sign in or reset a passwrod if forgotten.
+
+<details><summary><b>Sign In</b></summary>
+
+![Sign In](readme/assets/images/mob_sign_in.png)
+
+</details><br/>
+
+<details><summary><b>Password Reset</b></summary>
+
+![Password Reset](readme/assets/images/password_reset.png)
+![Password Reset Confirmation](readme/assets/images/password-reset-conf.png)
+</details><br/>
+
+
 ### **Sign Out**
+
+Before sign out the site completely, users will be shown a page where they need to confirm their exit.
+
+<details><summary><b>Sign Out</b></summary>
+
+![Sign Out](readme/assets/images/sign_out.png)
+</details><br/>
+
 ### **Footer**
+The footer section features the Logo, connections to sicial media platforms, a subscription form for newsletters (via MailChimp), a direct link to Luminique's privacy policy, and a FAQ link that addresses frequently asked questions.
+
+<details><summary><b>Footer</b></summary>
+
+![Footer](readme/assets/images/footer.png)
+</details><br/>
+
 ### **Flash Messages**
+The sites incorporates flash messages and confirmation pages when an action has been performed (i.e. delete/update actions).
+
+<details><summary><b>Confirmation Messages</b></summary>
+
+![Add Product to the Bag](readme/assets/images/add_product_bag.png)
+
+![Remove Product from the Bag](readme/assets/images/remove_product_bag.png)
+
+![Delete Clarification](readme/assets/images/delete-clarification.png)
+
+![Remove Product from the Bag](readme/assets/images/remove_product_bag.png)
+
+![Search Criteria](readme/assets/images/error_search.png)
+
+![Created Success](readme/assets/images/created_success.png)
+
+![Updated Success](readme/assets/images/updated_success.png)
+
+![Deleted Success](readme/assets/images/deleted_success.png)
+
+![Sign Out Success](readme/assets/images/signout_success.png)
+
+![Sign In Success](readme/assets/images/signin_success.png)
+
+</details><br/>
+
+## **Features Left to Implement**
+
+* Allow logged-in users to apply promotional codes
+* Enable logged-in users to rate products, like posts
+* Enhance email capabilities
+* Incorporate a contact form
+* Introduce subcategories like Collections (Spring, Winter, etc.), and a distinct Sale category
+
+[Back to top](<#table-of-content>)
 
 
 # Technologies Used
@@ -464,6 +550,28 @@ All of the links above plus the one below.
 # Testing
 ## Manual Testing
 BDD, or Behaviour Driven Development, is the process used to test user stories in a non-technical way, allowing anyone to test the features of an app.
+
+### Viewing And Navigation
+
+| User Story | Testing Results |
+|------------|-----------------|
+| As a Shopper I can view a list of products so that I can select some to purchase | Shoppers can browse through a list of products on the store's product page. |
+| As a Shopper I can click on a specific product so that I can view its details like price, description, product rating, and product image | Each product card allows users to click through to a detailed product page that includes all specified details. |
+| As a Shopper I want to read product reviews so that I can quickly base my purchasing decisions on them. | Every site visitor has the capability to read all reviews on the site. Each detailed product page offers this option  |
+| As a Shopper I want to leave a review about a product so that it can be seen by other site visitors as well as the owner of the online store. | Every authenticated user is granted the ability to post a review on products. Each detailed product page offers this option |
+| As a Shopper I can view the total of my purchases at any time so that I can avoid spending too much | The total cost of current purchases is displayed at the top of the screen next to the cart icon. This dynamic shopping cart icon, visible from any page, updates to show the total price of items in the cart. Clicking on the cart icon opens the shopping bag page, where the total purchase amounts are also visible.  |
+| As a Site User I can contact the Shop in an easy way so that I can interact with them if I need to | An email address is displayed at the top of the website(on big screens) and is also available on the FAQ page, detailing how users can contact us. Social media links are showcased across the site, providing users with a direct pathway to connect with the shop owner.|
+| As a Site User I can view the site owner's blog post so that I can get the latest information about tips and trends | A blog section is available in the navigation bar or on the home page with posts about tips, trends, and more. |
+
+### Registration And User Accounts
+
+| User Story | Testing Results |
+|------------|-----------------|
+| As a Site User I can easily register for an account so that I can have a personal account | The navigation menu offers a simple signup process that requires only minimal information from users.|
+| As a Site User I can easily login or logout so that I can view my profile and access my personal account information | Login/logout functionality works smoothly, with a user-friendly interface. *My profile* page allows user to change their personal information |
+| As a Site User I can have my own user profile so that I can view my personal order history, update my contact or payment information | Once a user has registered and logged in, selecting *My Profile* from the menu directs them to a profile page where they can view personal details and order history. |
+| As a Site User I can easily recover my password in case I forget it so that I can recover access to my account | Password recovery process is in place, with users able to reset via email confirmation. |
+| As a Site User I can receive an email confirmation after registering so that I can verify that my account registration was successful | Automatic email confirmation is sent upon successful registration. |
 
 
 
@@ -645,6 +753,13 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
     ![Html Validator](readme/assets/images/html-validator-bug2.png)
     </details><br/>
   
+* As a not authenticated users could not open the project detail view. Mistake found quiqly. There was a line *profile = get_object_or_404(UserProfile, user=request.user)*  which blocked this access in view.py.
+
+    <details><summary><b>Project Deatil view</b></summary>
+
+    ![Project Deatil view](readme/assets/images/detail-page-bug.png)    
+    </details><br/>
+
 
 ### Unfixed Bugs
 
