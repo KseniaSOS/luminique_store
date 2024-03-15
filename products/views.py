@@ -67,8 +67,7 @@ def product_detail(request, product_id):
     A view to show product detailed view.
     """
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.order_by('created_on')
-    profile = get_object_or_404(UserProfile, user=request.user)
+    reviews = product.reviews.order_by('created_on')    
 
     if request.method == 'POST':
 
@@ -87,8 +86,6 @@ def product_detail(request, product_id):
                     'Successfully posted a review.'
                 )
                 return redirect(reverse('product_detail', args=[product.id]))
-    else:
-        form = ReviewForm(initial={'name': profile.user, })
 
     template = 'products/product_detail.html'
     context = {

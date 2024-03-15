@@ -38,7 +38,6 @@
     * [Secure Checkout](<#secure-checkout>)
     * [Order Confirmation](<#order-confirmation>)
     * [Confirmation Emails](<#confirmation-emails>)
-    * [Admin Area](<#admin-area>) 
     * [Product Menagemant](<#product-menagement>)        
     * [Blog Menagement](<#blog-menagement>)
     * [Sign Up](<#sign-up>)
@@ -282,7 +281,130 @@ The wireframes were produced in Balsamiq. There are frames for a full width disp
 | Site Admin | Create blog posts drafts | To finish writing the content later | ☑ |
 | Site Admin | Create, update and delete blog posts | To manage my blog content on my site | ☑ |
 
+[Back to top](<#table-of-content>)
 
+## Site Structure
+The Luminique has an minimalistic, clean and intuitive design that makes the site easy to navigate for the user. The site is visible for two types of users: when **the user is logged out** and when **the user is logged in**.
+
+Current pages:
+
+  * Home 
+  * Products/Product detail view
+  * Blog/Post detail view  
+  * My Profile *(just for authenticated user)*
+  * My Bag *(just for authenticated user)*
+  * Checkout *(just for authenticated user)*
+  * My wishlist *(just for authenticated user)*
+  * Product/Post Management *(just for admin)* 
+  * SignUp/ LogIn / LogOut
+
+Read more details about different pages in the [Features](<#features>) section.
+
+[Back to top](<#table-of-content>)
+
+## Design Choices
+### Color Scheme
+
+I opted for a light theme for the Bootstrap navigation menu, employing a primary color scheme that includes various shades of green set against a white backdrop. Additionally, I incorporated other colors such as yellow for the rating icons and the Bootstrap buttons designated for warnings and dangers.
+<details><summary><b>Color Palette</b></summary>
+
+![Color Palette](readme/assets/images/color_palette.png)
+</details><br/>
+
+### Typography
+
+**Protest Strike** - is an original solid but peaceful Sans Serif typeface for the logo of the site.
+
+**Oswald** - used for all text on the site, including headings and links. It is a neutral font that is clearly visible and easy to read. It does not distract attention from the content.
+
+<details><summary><b>Google Font</b></summary>
+
+![Google Font](readme/assets/images/google_font.png)
+</details><br/>  
+
+[Back to top](<#table-of-content>)
+
+# **Features**
+## **Existing Features**
+
+### **Navigation**
+The navigation bar is straightforward, featuring a logo and dropdown links to various pages. The visibility of certain menus changes based on the user's authentication status, with an additional menu item appearing for users logged in as administrators. Above the main navigation, a persistent top bar displays information about free shipping, the shop's email, and links to social media.
+
+*Visible links to logged out users:*
+
+* Logo - leads to the Home Page
+* Products -  features a dropdown menu allowing sorting of products **by price**, **by rating** or displays **all products**
+* Categories - offers a dropdown with options for product categories such as  **earrings**, **bracelets**, **Necklaces**, or a list of **all categories**
+* SpecialOffers - presents a dropdown with options for **new arrivals**, **deals**, or a shows **all specials**
+* Blog -  includes a dropdown menu categorizing posts into **trends**, **tips**, **inspiration** or displays **all posts**
+* Search Box - enables users to find products throughout the site
+* Account - provides access for users to sign in
+* Bag - Shows the accumulated cost in the bag as items are added
+
+<details><summary><b>Navigation Large - User Not Logged In</b></summary>
+
+![Navigation Large - User Not Logged In](readme/assets/images/)
+</details><br/>
+
+<details><summary><b>Navigation Small - User Not Logged In</b></summary>
+
+![Navigation Small - User Not Logged In](readme/assets/images/)
+</details><br/>
+
+*Visible links to logged in users:*
+
+All of the links that are visible to not authenticated users plus an extra dropdown menu with more links.
+
+* Create New Recipe - allows the user to create a new recipe
+* View My Recipes - lists all recipes created by the logged in user.
+* Log Out - Logs out the user.
+
+<details><summary><b>Navigation Large - User Logged In</b></summary>
+
+![Navigation Large - User Logged In](readme/assets/images/)
+</details><br/>
+
+<details><summary><b>Navigation Small - User Logged In</b></summary>
+
+![Navigation Small - User Logged In](readme/assets/images/)
+</details><br/>
+
+*Visible links if user is administrator:*
+
+All of the links above plus the one below.
+
+* Add new Category - allows to admin to create a new category for the site
+
+<details><summary><b>Navigation Large - Admin Logged In</b></summary>
+
+![Navigation Large - Admin Logged In](readme/assets/images/)
+</details><br/>
+
+<details><summary><b>Navigation Small - Admin Logged In</b></summary>
+
+![Navigation Small - Admin Logged In](readme/assets/images/)
+</details><br/>
+
+### **Home**
+
+### **Products**
+### **Product Detail View**
+
+### **Review**
+### **Blog** 
+### **Post Detail View** 
+### **Wishlist** 
+### **Shopping Bag** 
+### **Secure Checkout** 
+### **Order Confirmation** 
+### **Confirmation Emails** 
+### **Product Menagemant**
+### **Blog Menagement**
+### **Sign Up**
+### **Sign In**
+### **Sign Out**
+### **Footer**
+### **Flash Messages**
 
 
 # Technologies Used
@@ -495,8 +617,27 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
 ## Known bugs
 ### Fixed Bugs
 
-* Dulicate ID on all_products page. 
-  * Changed id to class and remaned.
+* **CRSF Verification failed.** Because of using django 4, there are requirements to add *CSRF_TRUSTED_ORIGINS* to the setting.py.
+
+  [See Doc.](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-CSRF_TRUSTED_ORIGINS)
+   
+    <details><summary><b>CRSF Verification</b></summary>
+    
+    ![CRSF Verification](readme/assets/images/CRSF_Verification_bug.png)
+    </details><br/>
+
+
+* When using bootstrap 5 the ***JS* didn't work** with toast companents so I had to add some extra code.
+
+  [See Doc.](https://getbootstrap.com/docs/5.0/components/toasts/#usage)
+  
+    <details><summary><b>Inintialise toasts via JavaScript</b></summary>
+    
+    ![toasts via JavaScript](readme/assets/images/toastsJS.png)
+    </details><br/>
+
+
+* Dulicate ID on all_products page. Changed id to class and remaned.
 
     <details><summary><b>Html Validator</b></summary>
 
@@ -507,8 +648,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
 
 ### Unfixed Bugs
 
-* Missing form label. 
-  * This was a code from Mailchimp, so I didn't changed it to escape problems in the future.
+* **Missing form label.** Wave testing showas an error in footer.This was a code from Mailchimp, so I didn't changed it to escape problems in the future.
 
     <details><summary><b>Wave Bug</b></summary>
     
