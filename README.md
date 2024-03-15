@@ -202,16 +202,85 @@ Models used (besides standard user model) in this project are:
 
 <details><summary><b>Database Schema</b></summary>
 
-![Database Schema](readme/assets/images/)
+![Database Schema](readme/assets/images/db-Schema.png)
 
 </details><br/>
 
 [Back to top](<#table-of-content>)
 
 
+# **User Experience (UX)**
+## Wireframes
+
+The wireframes were produced in Balsamiq. There are frames for a full width display, tablets and a small mobile device.
+
+<details><summary><b>Wireframes</b></summary>
+
+![Wireframes](readme/assets/images/wireframes-home.png)
+
+![Wireframes](readme/assets/images/wireframes-products.png)
+
+</details><br/>
 
 
+## User Stories
+### Viewing And Navigation
 
+| User Role | Action | Goal | Completed |
+|-----------|--------|------|:---------:|
+| Shopper | View a list of products | To select some to purchase | ☑ |
+| Shopper | Click on a specific product | To view its details like price, description, product rating, and product image | ☑ |
+| Shopper | leave a review about a product | It can be seen by other site visitors as well as the owner of the online store. | ☑ |
+| Shopper | View the total of my purchases at any time | To avoid spending too much | ☑ |
+| Shopper | Contact Shop in an easy way | To interact with them if needed | ☑ |
+| Shopper | View the site owner's blog post | To get the latest information about tips and trends | ☑ |
+
+
+### Registration And User Accounts
+
+| User Role | Action | Goal | Completed |
+|-----------|--------|------|:---------:|
+| Site User | Easily register for an account | To have a personal account | ☑ |
+| Site User | Easily login or logout | To view my profile and access my personal account information | ☑ |
+| Site User | Have my own user profile | To view my personal order history, update my contact or payment information | ☑ |
+| Site User | Easily recover my password in case I forget it | To recover access to my account | ☑ |
+| Site User | Receive an email confirmation after registering | To verify that my account registration was successful | ☑  |
+| Site User | Create a wishlist | To come back later to purchase the products | ☑ |
+
+
+### Sorting And Searching
+
+| User Role | Action | Goal | Completed |
+|-----------|--------|------|:---------:|
+| Shopper | Sort through all the available products | To identify the best rated, best priced, and products based on category | ☑ |
+| Shopper | Sort a specific category of product | To find the best rated or best priced in the specific category or sort the products in that category by name | ☑ |
+| Shopper | Use a search input | To find a specific product | ☑ |
+| Shopper | See the list of what I have searched for and the number of results | To quickly decide what is available and I want to purchase | ☑ |
+| Shopper | View posts sorted by category  | To narrow my search and focus on a particular category of personal interest | ☑ |
+
+
+### Purchasing And Checkout
+
+| User Role | Action | Goal | Completed |
+|-----------|--------|------|:---------:|
+| Shopper | Easily select the quantity of a product when purchasing it | To ensure I get the correct product and quantity | ☑ |
+| Shopper | Easily view items in my bag to be purchased | To see the total cost and all items I will get | ☑ |
+| Shopper | Adjust the amount of products in my bag | To easily make changes to my purchase before checkout | ☑ |
+| Shopper | Provide my payment information in a simple way | To make the checkout process quick and easy | ☑ |
+| Shopper | Feel safe and secure while giving my personal and payment data | To confidently provide the needed information to make a purchase | ☑ |
+| Shopper | View an order confirmation after checkout | To ensure that the order was placed correctly | ☑ |
+| Shopper | Receive an email confirmation after completed checkout | To keep the confirmation for my records | ☑ |
+| Shopper | Receive an email confirmation when my order changes | To get relevant information about my order | ☒ |
+
+
+### Site Admin
+
+| User Role | Action | Goal | Completed |
+|-----------|--------|------|:---------:|
+| Site Admin | Add, edit or delete products on my site | To manage my Store content | ☑ |
+| Site Admin | Log out from the site | To feel safe that nobody can access the admin area | ☑ |
+| Site Admin | Create blog posts drafts | To finish writing the content later | ☑ |
+| Site Admin | Create, update and delete blog posts | To manage my blog content on my site | ☑ |
 
 
 
@@ -442,8 +511,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
   * This was a code from Mailchimp, so I didn't changed it to escape problems in the future.
 
     <details><summary><b>Wave Bug</b></summary>
-
     
-    ![Wave Bug](readme/assets/images/vawe-bug.png)
+    ![Wave Bug](readme/assets/images/wave-bug.png)
     </details><br/>
   

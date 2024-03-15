@@ -290,6 +290,8 @@ a.tag-badge > span.badge:hover {
     position: relative;
     bottom: 0;
     width: 100%;
+    position: sticky;
+    top: 100%;
 }
 
 .subscribe-form {

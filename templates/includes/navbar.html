@@ -99,10 +99,10 @@
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                         <li>
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Menagement</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                         </li>
                         <li>
-                            <a href="{% url 'add_post' %}" class="dropdown-item">Blog Menagement</a>
+                            <a href="{% url 'add_post' %}" class="dropdown-item">Blog Management</a>
                             {% endif %}
                         </li>
                         <li>
