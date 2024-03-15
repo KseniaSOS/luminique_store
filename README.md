@@ -573,6 +573,15 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 | As a Site User I can easily recover my password in case I forget it so that I can recover access to my account | Password recovery process is in place, with users able to reset via email confirmation. |
 | As a Site User I can receive an email confirmation after registering so that I can verify that my account registration was successful | Automatic email confirmation is sent upon successful registration. |
 
+### Sorting And Searching
+
+| User Story | Testing Results |
+|------------|-----------------|
+| As a Shopper I can sort through all the available products so that I can identify the best rated, best priced, and products based on category | Products can be sorted by various criteria directly from the navigation or from the sorting bar on the products page. |
+| As a Shopper I can sort a specific category of product so that I can find the best rated or best priced in the specific category or sort the products in that category by name | Category-specific sorting is available, with options for rating, price, and alphabetical order. |
+| As a Shopper I can use a search input so that I can find a specific product | A search bar is prominently placed in navigation menu and returns accurate results. |
+| As a Shopper I can see the list of what I have searched for and the number of results so that I can quickly decide what is available and I want to purchase | The search results page clearly displays the number of results and the items found. |
+
 
 
 [Back to top](<#table-of-content>)

@@ -278,7 +278,6 @@ a.tag-badge > span.badge:hover {
     color: #000000 !important;
 }
 
-
 /* footer */
 
 .btn-dark {  
@@ -286,12 +285,8 @@ a.tag-badge > span.badge:hover {
 } 
 
 .footer-section {
-    background: #d4e7dd;
-    /* position: relative; */
-    /* bottom: 0; */
-    width: 100%;
-    position: sticky;
-    top: 100%;
+    background: #d4e7dd;    
+    width: 100%;    
 }
 
 .subscribe-form {
