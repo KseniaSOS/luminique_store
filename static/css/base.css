@@ -286,8 +286,11 @@ a.tag-badge > span.badge:hover {
 
 .footer-section {
     background: #d4e7dd;    
-    width: 100%;    
-}
+    width: 100%;
+    bottom: 0;       	
+    position: sticky;	
+    top: 100%;      
+} 
 
 .subscribe-form {
     position: relative;

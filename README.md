@@ -582,6 +582,28 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 | As a Shopper I can use a search input so that I can find a specific product | A search bar is prominently placed in navigation menu and returns accurate results. |
 | As a Shopper I can see the list of what I have searched for and the number of results so that I can quickly decide what is available and I want to purchase | The search results page clearly displays the number of results and the items found. |
 
+### Purchasing And Checkout
+
+| User Story | Testing Results |
+|------------|-----------------|
+| As a Shopper I can easily select the quantity of a product when purchasing it so that I can ensure I get the correct product and quantity | Product quantity selection is intuitive and accessible on the product detail page. |
+| As a Shopper I can easily view items in my bag to be purchased so that I can see the total cost and all the items I will get | The shopping bag page provides a detailed list of selected items and total cost. |
+| As a Shopper I can adjust the amount of products in my bag so that I can easily make changes to my purchase before checkout | Users can modify product quantities or remove items from the bag on the shopping bag page. |
+| As a Shopper I can provide my payment information in a simple way so that I can make the checkout process quick and easy | The checkout process is streamlined, with clear fields for payment information. |
+| As a Shopper I can feel myself safe and secure while giving my personal and payment data so that I can confidently provide the needed information to make a purchase | Payment process is secured with encryption, ensuring data safety. |
+| As a Shopper I can view an order confirmation after checkout so that I ensure that the order was placed correctly and I have not made any mistakes | Order confirmation is displayed on-screen post-purchase and sent via email. |
+| As a Shopper I can receive an email confirmation after completed checkout so that I can keep the confirmation for my records | An email summary of the purchase is automatically sent upon order completion. |
+| As a Shopper I can receive an email confirmation when my order changes so that I get relevant information about my order | Currently, updates to orders are not automatically emailed to customers. This feature is pending. |
+| As a Shopper I can create a wishlist so that I can come back later to purchase the products | Wishlist functionality allows users to save items for future consideration. |
+
+### Site Admin
+
+| User Story | Testing Results |
+|------------|-----------------|
+| As a Site Admin I can add, edit or delete products on my site so that I can manage my Store content | Full product management capabilities are available in the admin panel. |
+| As a Site Admin I can log out from the site so that I can feel safe that nobody can access the admin area | Secure logout functionality ensures that admin sessions are properly closed. |
+| As a Site Admin I can create blog posts drafts so that I can finish writing the content later. | Draft functionality allows for the saving of incomplete blog posts. |
+| As a Site Admin I can create, update, and delete blog posts so that I can manage my blog content on my site | Complete control over blog content is provided through the admin panel. |
 
 
 [Back to top](<#table-of-content>)
