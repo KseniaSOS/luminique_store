@@ -38,6 +38,7 @@
     * [Secure Checkout](<#secure-checkout>)
     * [Order Confirmation](<#order-confirmation>)
     * [Confirmation Emails](<#confirmation-emails>)
+    * [My Profile](<#my-profile>)
     * [Product Menagemant](<#product-menagement>)        
     * [Blog Menagement](<#blog-menagement>)
     * [Sign Up](<#sign-up>)
@@ -389,16 +390,124 @@ All of the links and two above.
 
 ### **Home**
 
+Just below the navigation menu lies a sizable Carousel, featuring three images that highlight the shop's promotions, complete with a Call To Action button. This carousel is designed to animate smoothly, ensuring an engaging transition between images.
+
+<details><summary><b>Home Page - Carousel</b></summary>
+
+![Home Page - Carousel](readme/assets/images/carousel-img.png)
+</details><br/>
+
+The homepage also features a menu with images representing product categories and a blog menu. Both sections include visual effects when hovered over with the mouse.
+
+<details><summary><b>Home Page - Product Categories</b></summary>
+
+![Home Page - Product Categories](readme/assets/images/product-categories.png)
+</details><br/>
+
+<details><summary><b>Home Page - Blog sections</b></summary>
+
+![Home Page - Product Categories](readme/assets/images/blog-sections.png)
+</details><br/>
+
 ### **Products**
+The Products page displays a comprehensive list of all the store's items. Additionally, it features a Scroll Top button, enabling users to quickly return to the top of the page with ease.
+
+<details><summary><b>Product - Sorter</b></summary>
+
+![Product - Sorter](readme/assets/images/sorter.png)
+</details><br/>
+
+<details><summary><b>Products page</b></summary>
+
+![Products page](readme/assets/images/products.png)
+</details><br/>
+
+
 ### **Product Detail View**
 
+The product page features an image alongside the product's name, ratings,number of reviews and product category. It includes detailed product descriptions and additional "Add to Wishlist" buttons. There's also a section for delivery information and a segment dedicated to customer reviews.
+
+<details><summary><b>Product Detail View</b></summary>
+
+![Product Detail View](readme/assets/images/product_detail.png)
+</details><br/>
+
 ### **Review**
+
+Just Registered users are able to review products.
+
+<details><summary><b>Product Review</b></summary>
+
+![Product Review](readme/assets/images/add_review.png)
+</details><br/>
+
 ### **Blog** 
+
+The Blog page presents a full list of all the store's posts. Above the posts, there're buttons designed to direct the user to a specific page. Additionally, it features a Scroll Top button, enabling users to quickly return to the top of the page with ease. Above the posts there is a button that takes the user to a specific page
+
+
+<details><summary><b>Blog page</b></summary>
+
+![Blog page](readme/assets/images/blog.png)
+</details><br/>
+
+
 ### **Post Detail View** 
+
+The detailed post view contains both an image and accompanying text.
+
+<details><summary><b>Post Detail View</b></summary>
+
+![Post Detail View](readme/assets/images/detail-post.png)
+</details><br/>
+
+
 ### **Wishlist** 
+
+The User's Wishlist page showcases a table filled with the selected products.
+
+<details><summary><b>Wishlist</b></summary>
+
+![Wishlist](readme/assets/images/wishlist.png)
+</details><br/>
+
+
 ### **Shopping Bag** 
+Once a site user adds products by clicking the 'add to bag' button, these items are saved in the shopping bag, accessible through the icon button in the navigation menu. Within the shopping bag section, users can modify or remove added products and gain insight into the total cost of the items, including and excluding delivery charges. From this page, the user has the option to continue shopping or proceed to the secure checkout page.
+
+<details><summary><b>Shopping Bag</b></summary>
+
+![Shopping Bag](readme/assets/images/shoppingBag.png)
+</details><br/>
+
 ### **Secure Checkout** 
+
+On the secure checkout page, users are prompted to fill out a form with their delivery and card details to finalize their order. If logged in, they have the option to save this information to their profile for future convenience. Users not logged in are presented with the opportunity to register or sign in. The page also includes an order summary for review. Should there be any concerns, users can modify their bag before proceeding. If satisfied with the summary, the "complete order" button allows them to submit their order for processing. This project utilizes Stripe as its payment service.
+
+<details><summary><b>Checkout</b></summary>
+
+![Checkout](readme/assets/images/Checkout.png)
+</details><br/>
+
 ### **Order Confirmation** 
+
+If all processes run smoothly and the webhooks between Stripe and the site function correctly, an order confirmation page will be displayed to the user. Additionally, a confirmation email will be sent to the user's registered email address.
+
+<details><summary><b>Checkout</b></summary>
+
+![Checkout](readme/assets/images/order_confirm.png)
+</details><br/>
+
+### **My Profile**
+
+The page is designed for registered users to view their profile, including orders and personal information.
+
+<details><summary><b>My Profile</b></summary>
+
+![My profile](readme/assets/images/my-profile.png)
+</details><br/>
+
+
 ### **Confirmation Emails**
 
 Upon order confirmation, the user receives a confirmation email at their registered email address.
@@ -409,8 +518,30 @@ Upon order confirmation, the user receives a confirmation email at their registe
 </details><br/>
 
 
-### **Product Menagemant**
-### **Blog Menagement**
+
+### **Product Managemant**
+The Product Management page offers administrators the tools to add, edit, delete, and locate products within the database. This interface is divided into two sections for streamlined navigation and operation.
+
+An edit button can be made also available on all products pages and the detail product page. This feature streamlines the process of updating or correcting products by providing immediate access to the editing interface from the product itself, enhancing the efficiency for administrators.
+
+<details><summary><b>Product Managemant</b></summary>
+
+![Product Menagemant](readme/assets/images/product_managemant.png)
+![Product Menagemant](readme/assets/images/edit_product_admin_Area.png)
+![Product Menagemant](readme/assets/images/edit_product_all_pages.png)
+![Product Menagemant](readme/assets/images/edit_product.png)
+</details><br/>
+
+### **Blog Management**
+
+The Manage Blog page is where the administrator can add blog posts. On the detail post page, an admin has the option to choose whether the post should be edited or removed from the blog. If the admin decides to delete a blog post, a confirmation/warning modal is displayed to prevent accidental deletions. 
+
+<details><summary><b>Blog Managemant</b></summary>
+
+![Add Post](readme/assets/images/blog_Managemant.png)
+![Blog Managemant](readme/assets/images/edit_delete_post.png)
+</details><br/>
+
 ### **Sign Up**
 
 If the site visitor has no registered user at Luminique Store, they have an opportunity to sign up. 
@@ -419,7 +550,6 @@ If the site visitor has no registered user at Luminique Store, they have an oppo
 
 ![Sign Up](readme/assets/images/mob_sign_up.png)
 </details><br/>
-
 
 ### **Sign In**
 
@@ -714,7 +844,7 @@ CI Python Linter [Code Institute Linter](https://pep8ci.herokuapp.com/) was used
 | Links  | pass    | pass      | pass       | pass      | pass     | pass            | pass            |
 
 
-Hover effect on blog categories is bigger than images. This can be seen just on big screens more then 1600x900.
+The website appears to malfunction on my iPhone 12 Mini, with the footer taking up the entire screen. However, when tested by others(tutors from CI) on their devices, it functioned properly, including on my husband's iPhone 13 Mini, where everything displayed correctly.
 <details><summary><b>Responsive Design Checker</b></summary>
 
 ![Responsive Design Checker](readme/assets/images/Responsive-Design-Checker.png)
@@ -800,4 +930,206 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
     
     ![Wave Bug](readme/assets/images/wave-bug.png)
     </details><br/>
-  
+
+
+# Deployment
+## Deployment To Heroku
+
+**Requirement and Procfile**
+
+Before deployment on Heroku, two files need to be created and be up to date, a `requirements.txt` file and a `Procfile`.
+
+- The `requirements.txt` file is created by executing the following command in the terminal window: ` pip3 freeze --local > requirements.txt`. A file with all requirements will be created.
+- Then create a file named `Procfile` and insert the following code: `web: gunicorn PROJ_NAME.wsgi?`, with no empty lines after it.
+- Then make sure to push these files to your repository.
+
+**Creating Heroku App**
+
+- Log into Heroku and go to the Dashboard.
+- Click "New" and then select "Create new app".
+- Give your app a name and select the region closest to you.
+- Click "Create app" to confirm.
+
+**Creating a database**
+
+- Log into ElephantSQL.com and access your dashboard.
+- Click "Create New Instance"
+- Set up a plan, give your plan a **Name**, select the **Tiny Turtel (Free)** plan, leave the **Tags** field blank.
+- Select "Select Region" and select a data center new you.
+- Click "Review".
+- Confirm your details and then click "Create instance".
+- Return to the ElephantSQL dashboard and click on the database instance name for this project.
+- In the URL section, click the copy icon to copy the database URL.
+- In your workspace make sure django and gunicorn are installed by running `pip3 install 'django<4' gunicorn`.
+- Equally make sure that infrastructure for the database is installed by running `pip3 install dj_database_url===0.5.0 psycopg2`.
+- Update the `requirements.txt` file if needed.
+
+**The env.py file**
+
+- If you do not have a `env.py` file in your workspace create one and make sure it is included in the `.gitignore` file.
+- At the top of the `env.py` file add the line: `import os`.
+- Below that add the following two lines:
+
+  `os.environ["DATABASE_URL"] = "<copied URL from SQL database>"` <br>
+  `os.environ["SECRET_KEY"] = "<create a secret key of your own>"` <br>
+
+- If you are using Cloudinary storage also add the following line: <br>
+
+  `os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"`<br>
+
+- Make sure the environment variables are imported correctly into the `settings.py` file.
+- Run `python manage.py migrate` in the terminal window to migrate the data structure to the database instance.
+
+**Setting Environment Variables**
+
+- On the Heroku Dashboard select the app you just created and then select the "Settings" tab.
+- Click "Reveal Config Vars"
+- Add the following config vars: <br>
+
+  `DATABASE_URL` - copy the database URL from ElephantSQL in here, it should also be in the `env.py` file. <br>
+  `SECRET_KEY` - copy your secret key in here. <br>
+
+- If you are using Cloudinary storage you also need to copy your personal `CLOUDINARY_URL` into these fields. <br>
+- In addition, you may need the key `PORT` with value `8000`.
+
+**Connecting to GitHub and Deploy**
+
+- On the Heroku Dashboard select the app you just created and then select the "Deploy" tab.
+- Select GitHub for the deployment method.
+- Search for the name of the project repository and click "Connect".
+- Further down the page, select "Enable Automatic Deploys" if desired.
+- Then finally further down, select "Deploy Branch" and watch the app being built.
+
+**New Database Settings**
+ -We're required to update the database configurations in the settings.py file to switch our database from SQLite3 to PostgreSQL.
+
+
+    if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
+
+**AWS Setting**
+- For this project, numerous configuration variables must be established, including those for Amazon Web Services, Stripe, and email hosts. Certain settings must also be included in the env.py file within Gitpod. The configuration variables for this project encompass in Heroku:
+
+
+        AWS_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY
+        DATABASE_URL
+        EMAIL_HOST_PASS
+        EMAIL_HOST_USER
+        PORT
+        SECRET_KEY
+        STRIPE_PUBLIC_KEY
+        STRIPE_SECRET_KEY
+        STRIPE_WH_SECRET
+        USE_AWS
+
+
+
+**Installed_Apps**
+- Ensuring the correct installed apps are added to the settings file is crucial. These apps can also be identified within the requirements file.
+
+**Django settings.py**
+- To enable Django to comprehend the usage and storage locations for static files, it's necessary to incorporate additional lines into the settings.py file. Moreover, several lines related to Amazon Web Services, utilized by this project, also need to be added.
+
+
+if 'USE_AWS' in os.environ:
+    # Cache Control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'luminique'
+    AWS_S3_REGION_NAME = 'eu-central-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    
+    # Static and Media Files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+
+    # Stripe
+    FREE_DELIVERY_THRESHOLD = 49
+    STANDARD_DELIVERY_PERCENTAGE = 10
+
+    STRIPE_CURRENCY = 'eur'
+    STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET")
+    STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
+    STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+
+
+**Add CRSF Verification**
+- To ensure the application functions via Heroku, it's essential to include our Heroku app and localhost in the list of allowed hosts. Additionally, if you plan to run the project locally, you may need to insert a CSRF_TRUSTED_ORIGINS line.
+
+        CSRF_TRUSTED_ORIGINS = ['https:[your-app].herokuapp.com/', 'https://[localhost]']
+
+- For deployment, navigate to the top of the settings page on Heroku and select the 'Deploy' tab. Choose 'Github' as the deployment method. Search for and connect to the desired repository name.
+
+- Move to the manual deployment section at the bottom and click 'Deploy Branch'. With any luck, the deployment will be successful!
+
+
+### Forking the Repository
+
+- Log in to GitHub and locate the GitHub repository you want to fork.
+- At the top of the Repository above the "Settings" Tab on the menu, locate the "Fork" Button and click it.
+- You will have a copy of the original repository in your GitHub account.
+- You will now be able to make changes to the new version and keep the original safe.
+
+### Making a Local Clone
+
+- Log into GitHub and locate the repository you want to clone.
+- Click the 'Code' dropdown above the file list.
+- Copy the URL for the repository.
+- Open Git Bash in your IDE.
+- Change the current working directory to the location where you want the cloned directory.
+- Type `git clone` in the CLI and then paste the URL you copied earlier. This is what it should look like:
+  `$ git clone https://github.com/`
+- Press Enter to create your local clone.
+
+You will need to install all of the packages listed in the requirements file you can use the following command in the terminal `pip install -r requirements.txt` which will do it for you.
+
+[Back to top](<#table-of-content>)
+
+# Credits
+
+* Recipes and text content of the site - **Ksenia Sossin** 
+* Images - [PEXELS](https://www.pexels.com/@the-glorious-studio-3584518/?filter=photos)
+* Privacy and Policy- [Privacy and Policy](https://www.privacypolicygenerator.info/)
+
+
+## Media
+Resources and inspiration came from a few sources:
+
+  * [Django Documentation](https://docs.djangoproject.com/en/4.2/)
+  * [StackOverflow](https://stackoverflow.com/)
+  * [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - YouTube tutorial
+  * [Building an E-commerce Platform - Project - Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) - based on the project by the Code Institute 
+  * [Pandora](https://at.pandora.net/de/) - Jewelery website inspiration
+
+[Back to top](<#table-of-content>)
+
+# Acknowledgements
+
+I would like to acknowledge the [Code Institute](https://codeinstitute.net/) for the opportunity to work on such a project.
+It has been a challenging experience, but I have learned a lot.
+Special thanks goes to my family for their continued support and patience.
+
+[Back to top](<#table-of-content>)
