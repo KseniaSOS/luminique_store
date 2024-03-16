@@ -188,12 +188,12 @@ Models used (besides standard user model) in this project are:
 * **Post** - Manages blog posts, linking them to their categories through a ForeignKey to the `PostCategory` model for proper categorization.
 
 **App: Checkout**
-* **Order** -  Responsible for managing customer orders, including storing delivery information, generating order numbers, and updating totals. It's linked to the user_profile model through a foreign key.
-* **OrderLineItem** - Keeps track of each order item in each order the customer with ForeignKeys to the Order and Product model.
+* **Order** -  Responsible for managing customer orders, including storing delivery information, generating order numbers, and updating totals. It's linked to the `Profile` model through a foreign key.
+* **OrderLineItem** - Keeps track of each order item in each order the customer with ForeignKeys to the `Order` and `Product` model.
 
 **App: Products**
 * **Category** - Handles product categories.
-* **Product** - This model is tasked with managing the details of products, such as price, name, and category. It includes a ManyToMany connection to the User model to facilitate tracking of products in users' wishlists.
+* **Product** - This model is tasked with managing the details of products, such as price, name, and category. It includes a ManyToMany connection to the `User` model to facilitate tracking of products in users' wishlists.
 * **Review** - This model manages product reviews, allowing users to leave feedback on products they have purchased or used.
 
 **App: Profiles**
@@ -230,8 +230,8 @@ The wireframes were produced in Balsamiq. There are frames for a full width disp
 |-----------|--------|------|:---------:|
 | Shopper | View a list of products | To select some to purchase | ☑ |
 | Shopper | Click on a specific product | To view its details like price, description, product rating, and product image | ☑ |
-| Shopper | read product reviews | to base my purchasing decisions on them | ☑ |
-| Shopper | leave a review about a product | It can be seen by other site visitors as well as the owner of the online store. | ☑ |
+| Shopper | Read product reviews | to base my purchasing decisions on them | ☑ |
+| Shopper | Leave a review about a product | It can be seen by other site visitors as well as the owner of the online store. | ☑ |
 | Shopper | View the total of my purchases at any time | To avoid spending too much | ☑ |
 | Shopper | Contact Shop in an easy way | To interact with them if needed | ☑ |
 | Shopper | View the site owner's blog post | To get the latest information about tips and trends | ☑ |
@@ -294,8 +294,8 @@ Current pages:
   * Products/Product detail view
   * Blog/Post detail view  
   * My Profile *(just for authenticated user)*
-  * My Bag *(just for authenticated user)*
-  * Checkout *(just for authenticated user)*
+  * My Bag 
+  * Checkout 
   * My wishlist *(just for authenticated user)*
   * Product/Post Management *(just for admin)* 
   * SignUp/ LogIn / LogOut
@@ -395,6 +395,15 @@ Just below the navigation menu lies a sizable Carousel, featuring three images t
 <details><summary><b>Home Page - Carousel</b></summary>
 
 ![Home Page - Carousel](readme/assets/images/carousel-img.png)
+
+</details><br/>
+
+The Carousel in hidden on the mobile screens.
+
+<details><summary><b>Mobile - Home Page - Carousel</b></summary>
+
+![Mobile - Home Page - Carousel](readme/assets/images/mobile-hp.png)
+
 </details><br/>
 
 The homepage also features a menu with images representing product categories and a blog menu. Both sections include visual effects when hovered over with the mouse.
@@ -464,7 +473,7 @@ The detailed post view contains both an image and accompanying text.
 
 ### **Wishlist** 
 
-The User's Wishlist page showcases a table filled with the selected products.
+The User's Wishlist page showcases a table filled with the selected products. Just registered useres have an access to this page.
 
 <details><summary><b>Wishlist</b></summary>
 
@@ -845,11 +854,6 @@ CI Python Linter [Code Institute Linter](https://pep8ci.herokuapp.com/) was used
 
 
 The website appears to malfunction on my iPhone 12 Mini, with the footer taking up the entire screen. However, when tested by others(tutors from CI) on their devices, it functioned properly, including on my husband's iPhone 13 Mini, where everything displayed correctly.
-<details><summary><b>Responsive Design Checker</b></summary>
-
-![Responsive Design Checker](readme/assets/images/Responsive-Design-Checker.png)
-</details><br />
-
 
 ### Browser Compatibility
 
@@ -906,7 +910,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
     </details><br/>
 
 
-* Dulicate ID on all_products page. Changed id to class and remaned.
+* **Dulicate ID** on all_products page. Changed id to class and remaned.
 
     <details><summary><b>Html Validator</b></summary>
 
@@ -930,6 +934,9 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
     
     ![Wave Bug](readme/assets/images/wave-bug.png)
     </details><br/>
+
+
+* **Deals.** Just before the project was due for delivery, I found an issue where, upon adding sale products to the bag, the system only summed up the original prices, neglecting the discounted rates. This oversight was mine, I overlooked it earlier, and by then, it had become too late to incorporate additional coding.
 
 
 # Deployment
@@ -1116,11 +1123,14 @@ You will need to install all of the packages listed in the requirements file you
 
 
 ## Media
+
 Resources and inspiration came from a few sources:
 
   * [Django Documentation](https://docs.djangoproject.com/en/4.2/)
+  * [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
   * [StackOverflow](https://stackoverflow.com/)
-  * [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - YouTube tutorial
+  * [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - YouTube chanel as inspiration
+  * [Youtube](https://www.youtube.com/watch?v=hr4JiDr7Aec) - used this css tutorial for my home page
   * [Building an E-commerce Platform - Project - Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) - based on the project by the Code Institute 
   * [Pandora](https://at.pandora.net/de/) - Jewelery website inspiration
 
