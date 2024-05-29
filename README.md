@@ -910,7 +910,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the site within the
     </details><br/>
 
 
-* **Dulicate ID** on all_products page. Changed id to class and remaned.
+* **Duplicate ID** on all_products page. Changed id to class and remaned.
 
     <details><summary><b>Html Validator</b></summary>
 
