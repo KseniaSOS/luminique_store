@@ -1,9 +1,9 @@
 # **Luminique**
 
-![Sweet Code Blog responsive design](readme/assets/images/responsive.png)
+![Luminique responsive design](readme/assets/images/responsive.png)
 
 **Developer: Ksenia Sossin**
-* [View Sweet Code Blog Repository](https://github.com/KseniaSOS/luminique_store)
+* [View Luminique Repository](https://github.com/KseniaSOS/luminique_store)
 * [View live website](https://luminique-3d156ce4ed79.herokuapp.com/)
 
 
